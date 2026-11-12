@@ -17,6 +17,7 @@ const App = () => {
   return (
     <>
       <Toaster position="top-right" />
+      <h1>created by vishakha</h1>
       {!isDashboard && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
