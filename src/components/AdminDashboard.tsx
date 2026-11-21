@@ -2245,7 +2245,7 @@ const AdminDashboard: React.FC = () => {
                       { label: 'Waxing', url: '/image2.png' },
                       { label: 'Mani/Pedi', url: '/image2.png' },
                       { label: 'Party Makeup', url: '/image4.png' },
-                      { label: 'Engagement', url: '/image2.png' },
+                      { label: 'Engagement', url: '/image4.png' },
                       { label: 'Bridal', url: '/hero.png' },
                     ].map(p => (
                       <button
