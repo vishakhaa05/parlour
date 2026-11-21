@@ -18,14 +18,14 @@ const AppContent = () => {
   const isDashboard = location.pathname.startsWith('/admin');
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFF8F6] text-[#29232A] overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-[#FFF9FA] text-[#1F2937] overflow-x-hidden">
       <Toaster 
         position="top-right" 
         toastOptions={{
           style: {
             background: '#FFFFFF',
-            color: '#29232A',
-            border: '1px solid #F2DCE2',
+            color: '#1F2937',
+            border: '1px solid #FCE7F0',
             boxShadow: '0 10px 25px -5px rgba(198, 93, 123, 0.15)',
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             fontSize: '13px',

@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 <h3 className="font-serif font-bold text-xl text-white tracking-wide leading-none">
                   Shree Ambika
                 </h3>
-                <p className="text-[10px] text-[#E8A0B1] tracking-[0.2em] uppercase font-semibold mt-1">
+                <p className="text-[10px] text-[#F9A8D4] tracking-[0.2em] uppercase font-semibold mt-1">
                   Beauty Parlour & Spa
                 </p>
               </div>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#C65D7B] text-[#E8A0B1] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
+                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#FA4D89] text-[#F9A8D4] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
                 title="WhatsApp Direct Contact"
                 aria-label="WhatsApp"
               >
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                 href="https://instagram.com/shreeambikabeauty"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#C65D7B] text-[#E8A0B1] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
+                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#FA4D89] text-[#F9A8D4] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
                 title="Instagram Profile"
                 aria-label="Instagram"
               >
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 href="https://facebook.com/shreeambikabeauty"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#C65D7B] text-[#E8A0B1] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
+                className="w-9 h-9 rounded-full bg-[#2C2430] hover:bg-[#FA4D89] text-[#F9A8D4] hover:text-white flex items-center justify-center transition border border-[#4D4151]"
                 title="Facebook Page"
                 aria-label="Facebook"
               >
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
           {/* Column 2: Navigation Links */}
           <div>
             <h4 className="font-serif font-bold text-white text-base mb-4 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#E8A0B1]" />
+              <Sparkles className="w-4 h-4 text-[#F9A8D4]" />
               <span>Navigation</span>
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/book" className="text-[#E8A0B1] hover:text-white transition font-semibold inline-flex items-center gap-1.5">
+                <Link to="/book" className="text-[#F9A8D4] hover:text-white transition font-semibold inline-flex items-center gap-1.5">
                   <CalendarCheck className="w-4 h-4" /> Book Appointment
                 </Link>
               </li>
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {
             </h4>
             
             <div className="flex items-start gap-2.5">
-              <Clock className="w-4 h-4 text-[#E8A0B1] shrink-0 mt-0.5" />
+              <Clock className="w-4 h-4 text-[#F9A8D4] shrink-0 mt-0.5" />
               <div>
                 <span className="text-white font-medium block">Mon – Sun: 9:00 AM – 8:00 PM</span>
                 <span className="text-xs text-[#A89EAA]">Open 7 Days for treatments</span>
@@ -170,29 +170,29 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-[#E8A0B1] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#F9A8D4] shrink-0 mt-0.5" />
               <span className="text-[#A89EAA]">
                 Shop No. 12, Ambika Galleria, Main Road, City Center
               </span>
             </div>
 
             <div className="flex items-center gap-2.5">
-              <Phone className="w-4 h-4 text-[#E8A0B1] shrink-0" />
+              <Phone className="w-4 h-4 text-[#F9A8D4] shrink-0" />
               <a href="tel:+919876543210" className="text-[#D8CFD8] hover:text-white transition">
                 +91 98765 43210
               </a>
             </div>
 
             <div className="flex items-center gap-2.5">
-              <Mail className="w-4 h-4 text-[#E8A0B1] shrink-0" />
+              <Mail className="w-4 h-4 text-[#F9A8D4] shrink-0" />
               <a href="mailto:shreeambika@gmail.com" className="text-[#D8CFD8] hover:text-white transition">
                 shreeambika@gmail.com
               </a>
             </div>
 
             <div className="pt-2">
-              <div className="p-3 bg-[#2C2430] rounded-xl border border-[#4D4151] text-xs text-[#E8A0B1] flex items-start gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#E8A0B1] shrink-0 mt-0.5" />
+              <div className="p-3 bg-[#2C2430] rounded-xl border border-[#4D4151] text-xs text-[#F9A8D4] flex items-start gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#F9A8D4] shrink-0 mt-0.5" />
                 <span>
                   Free cancellation or rescheduling up to 2 hours before your appointment.
                 </span>
@@ -212,7 +212,7 @@ const Footer: React.FC = () => {
               Customer Support
             </Link>
             <span>•</span>
-            <Link to="/admin" className="hover:text-[#E8A0B1] transition text-[11px]">
+            <Link to="/admin" className="hover:text-[#F9A8D4] transition text-[11px]">
               Admin Portal
             </Link>
           </div>

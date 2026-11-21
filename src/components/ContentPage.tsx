@@ -28,7 +28,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '45–60 mins',
     desc: 'Refresh your skin with relaxing facial treatments designed to cleanse, nourish and enhance your natural glow.',
     includes: ['Deep Pore Cleansing', 'Steam & Exfoliation', 'Nourishing Glow Mask', 'Relaxing Face & Neck Massage'],
-    image: '/images/facial-treatment.jpg',
+    image: '/image1.png',
     status: 'Active'
   },
 
@@ -41,7 +41,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '60 mins',
     desc: 'Relaxing hair spa treatment to nourish your hair and improve its softness and shine.',
     includes: ['Scalp Detox Massage', 'Deep Conditioning Cream', 'Steam Therapy', 'Gentle Blow Dry'],
-    image: '/images/hair-spa.jpg',
+    image: '/image3.png',
     status: 'Active'
   },
   {
@@ -52,7 +52,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '30 mins',
     desc: 'Professional haircut services to give your hair a fresh and stylish look.',
     includes: ['Hair Texture Consultation', 'Precision Cut & Trimming', 'Styling & Setting'],
-    image: '/images/haircut.jpg',
+    image: '/image3.png',
     status: 'Active'
   },
 
@@ -65,7 +65,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '60 mins',
     desc: 'Full body waxing service for smooth and well-groomed skin.',
     includes: ['Skin Pre-Cleanse & Prep', 'Gentle Organic Wax Application', 'Post-Wax Soothing Aloe Gel'],
-    image: '/images/body-wax.jpg',
+    image: '/image2.png',
     status: 'Active'
   },
   {
@@ -76,7 +76,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '60 mins',
     desc: 'Complete hand and foot care with nail grooming and a relaxing beauty treatment.',
     includes: ['Warm Herbal Soak', 'Nail Shaping & Cuticle Care', 'Exfoliating Scrub', 'Hydrating Hand & Foot Massage'],
-    image: '/images/nail-art.jpg',
+    image: '/image2.png',
     status: 'Active'
   },
 
@@ -89,7 +89,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '60 mins',
     desc: 'Beautiful party makeup to help you look confident and elegant for special occasions.',
     includes: ['Skin Primer & Base Preparation', 'Eye Makeup & Lash Setting', 'Lip Color & Highlight', 'Long-Lasting Setting Mist'],
-    image: '/images/party-makeup.jpg',
+    image: '/image4.png',
     status: 'Active'
   },
   {
@@ -100,7 +100,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '90 mins',
     desc: 'Elegant makeup styling for your special engagement celebration.',
     includes: ['HD Flawless Skin Base', 'Contouring & Strobing', 'Dramatic Eye Styling & Lashes', 'Hairstyling Assistance'],
-    image: '/images/bridal-makeup.jpg',
+    image: '/hero.png',
     status: 'Active'
   },
   {
@@ -112,7 +112,7 @@ export const ACTUAL_PARLOUR_SERVICES: PackageItem[] = [
     duration: '120 mins',
     desc: 'Professional bridal makeup to make your special day memorable.',
     includes: ['Waterproof HD Bridal Base', 'Jewelry, Saree & Dupatta Draping', 'Premium False Lashes', 'Complimentary Guest Makeup Service'],
-    image: '/images/bridal-makeup.jpg',
+    image: '/hero.png',
     status: 'Active'
   }
 ];
@@ -129,14 +129,14 @@ export const getServicePhoto = (name: string, category: string): string => {
   const n = (name || '').toLowerCase();
   const c = (category || '').toLowerCase();
 
-  if (n === 'facial' || c.includes('skin')) return '/images/facial-treatment.jpg';
-  if (n === 'hair spa') return '/images/hair-spa.jpg';
-  if (n === 'haircut' || c.includes('hair')) return '/images/haircut.jpg';
-  if (n === 'full body wax' || (c.includes('body') && n.includes('wax'))) return '/images/body-wax.jpg';
-  if (n.includes('manicure') || n.includes('pedicure') || n.includes('nail')) return '/images/nail-art.jpg';
-  if (n === 'party makeup') return '/images/party-makeup.jpg';
-  if (n.includes('bridal') || n.includes('engagement') || c.includes('makeup')) return '/images/bridal-makeup.jpg';
-  return '/images/facial-treatment.jpg';
+  if (n === 'facial' || c.includes('skin')) return '/image1.png';
+  if (n === 'hair spa') return '/image3.png';
+  if (n === 'haircut' || c.includes('hair')) return '/image3.png';
+  if (n === 'full body wax' || (c.includes('body') && n.includes('wax'))) return '/image2.png';
+  if (n.includes('manicure') || n.includes('pedicure') || n.includes('nail')) return '/image2.png';
+  if (n === 'party makeup') return '/image4.png';
+  if (n.includes('bridal') || n.includes('engagement') || c.includes('makeup')) return '/hero.png';
+  return '/image1.png';
 };
 
 const faqs = [
@@ -285,18 +285,18 @@ const ContentPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF8F6] pb-24">
+    <div className="min-h-screen bg-[#FFF9FA] pb-24">
       {/* Header Banner */}
-      <div className="bg-[#FFF8F6] border-b border-[#F2DCE2] py-14 sm:py-20 text-center">
+      <div className="bg-[#FFF9FA] border-b border-[#FCE7F0] py-14 sm:py-20 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full mb-3.5 border border-[#E8A0B1]/40">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full mb-3.5 border border-[#F9A8D4]/40">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Salon Menu & Transparent Pricing</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#29232A] mb-3.5 leading-tight">
-            Our <span className="text-[#C65D7B] italic">Services & Pricing</span>
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2937] mb-3.5 leading-tight">
+            Our <span className="text-[#FA4D89] italic">Services & Pricing</span>
           </h1>
-          <p className="text-[#6E6270] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          <p className="text-[#4B5563] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
             Explore our complete range of certified skincare, relaxing hair therapies, grooming, and bespoke bridal makeovers designed to enhance your natural beauty.
           </p>
         </div>
@@ -307,13 +307,13 @@ const ContentPage: React.FC = () => {
         
         {/* Search Bar */}
         <div className="max-w-md mx-auto mb-8 relative">
-          <Search className="w-4 h-4 text-[#6E6270] absolute left-4 top-3.5" />
+          <Search className="w-4 h-4 text-[#4B5563] absolute left-4 top-3.5" />
           <input
             type="text"
             placeholder="Search service (e.g. Facial, Hair Spa, Bridal)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-white rounded-full border border-[#F2DCE2] text-sm text-[#29232A] shadow-2xs focus:ring-2 focus:ring-[#C65D7B]/30 outline-none"
+            className="w-full pl-11 pr-4 py-3 bg-white rounded-full border border-[#FCE7F0] text-sm text-[#1F2937] shadow-2xs focus:ring-2 focus:ring-[#FA4D89]/30 outline-none"
           />
         </div>
 
@@ -328,8 +328,8 @@ const ContentPage: React.FC = () => {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-5 py-2.5 rounded-full font-semibold transition-all duration-200 text-xs sm:text-sm ${
                   isSelected
-                    ? 'bg-[#C65D7B] text-white shadow-salon'
-                    : 'bg-white text-[#29232A] hover:bg-[#F7E5E9] hover:text-[#C65D7B] border border-[#F2DCE2]'
+                    ? 'bg-[#FA4D89] text-white shadow-salon'
+                    : 'bg-white text-[#1F2937] hover:bg-[#FFF0F5] hover:text-[#FA4D89] border border-[#FCE7F0]'
                 }`}
               >
                 {cat.label}
@@ -340,17 +340,17 @@ const ContentPage: React.FC = () => {
 
         {/* Treatment Cards Grid: 3 on desktop, 2 on tablets, 1 on mobile */}
         {isLoading ? (
-          <div className="flex flex-col justify-center items-center py-20 text-[#C65D7B]">
+          <div className="flex flex-col justify-center items-center py-20 text-[#FA4D89]">
             <Loader2 className="w-8 h-8 animate-spin mb-2" />
-            <p className="text-[#6E6270] text-sm font-medium">Loading parlour services...</p>
+            <p className="text-[#4B5563] text-sm font-medium">Loading parlour services...</p>
           </div>
         ) : filteredTreatments.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-3xl p-8 border border-[#F2DCE2] max-w-lg mx-auto shadow-2xs">
-            <p className="font-serif font-bold text-lg text-[#29232A]">No services found in this category.</p>
-            <p className="text-[#6E6270] text-xs mt-1">Try another search keyword or click "All Services" above.</p>
+          <div className="text-center py-16 bg-white rounded-3xl p-8 border border-[#FCE7F0] max-w-lg mx-auto shadow-2xs">
+            <p className="font-serif font-bold text-lg text-[#1F2937]">No services found in this category.</p>
+            <p className="text-[#4B5563] text-xs mt-1">Try another search keyword or click "All Services" above.</p>
             <button
               onClick={() => { setSelectedCategory('All Services'); setSearchQuery(''); }}
-              className="mt-4 px-4 py-2 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full hover:bg-[#E8A0B1]/30 transition"
+              className="mt-4 px-4 py-2 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full hover:bg-[#F9A8D4]/30 transition"
             >
               View All Services
             </button>
@@ -358,7 +358,7 @@ const ContentPage: React.FC = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredTreatments.map((item, idx) => {
-              const displayImage = treatmentImages[item.name] || (item.image && item.image.startsWith('/images/') ? item.image : getServicePhoto(item.name, item.category));
+              const displayImage = treatmentImages[item.name] || (item.image && !item.image.startsWith('/images/') ? item.image : getServicePhoto(item.name, item.category));
               const isBridal = item.name.toLowerCase().includes('bridal');
               const isContactPricing = item.price.toLowerCase().includes('contact') || isBridal;
               const specialBenefit = item.specialBenefit || (isBridal ? 'One complimentary makeup service with the bridal booking.' : null);
@@ -366,28 +366,28 @@ const ContentPage: React.FC = () => {
               return (
                 <div 
                   key={item._id || idx} 
-                  className="bg-white p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-salon transition-all duration-300 border border-[#F2DCE2] flex flex-col justify-between group h-full"
+                  className="bg-white p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-salon transition-all duration-300 border border-[#FCE7F0] flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Image Header with Aspect Ratio & Object-fit */}
-                    <div className="relative mb-5 rounded-2xl overflow-hidden bg-[#F7E5E9] aspect-[16/10] flex items-center justify-center">
+                    <div className="relative mb-5 rounded-2xl overflow-hidden bg-white border border-[#FCE7F0] aspect-[16/10] flex items-center justify-center p-3">
                       <img 
                         src={displayImage} 
                         alt={item.name} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                        className="w-full h-full object-contain group-hover:scale-105 transition duration-500" 
                         onError={(e) => {
                           (e.target as HTMLImageElement).src = getServicePhoto(item.name, item.category);
                         }}
                       />
                       
                       {/* Price Tag Pill */}
-                      <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full shadow-xs text-xs font-bold text-[#C65D7B] border border-[#F2DCE2]">
+                      <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3.5 py-1 rounded-full shadow-xs text-xs font-bold text-[#FA4D89] border border-[#FCE7F0]">
                         {isContactPricing ? 'Contact for Pricing' : item.price}
                       </div>
 
                       {/* Duration Tag */}
-                      <div className="absolute bottom-3.5 left-3.5 bg-[#29232A]/85 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-white flex items-center gap-1.5 font-medium">
-                        <Clock className="w-3.5 h-3.5 text-[#E8A0B1]" />
+                      <div className="absolute bottom-3.5 left-3.5 bg-[#1F2937]/85 backdrop-blur-md px-3 py-1 rounded-full text-[11px] text-white flex items-center gap-1.5 font-medium">
+                        <Clock className="w-3.5 h-3.5 text-[#F9A8D4]" />
                         <span>{item.duration || '45 mins'}</span>
                       </div>
 
@@ -414,9 +414,9 @@ const ContentPage: React.FC = () => {
                             type="button"
                             onClick={() => fileInputRefs.current[item.name]?.click()}
                             disabled={uploadingImage === item.name}
-                            className="bg-white/90 hover:bg-white text-[#29232A] px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5"
+                            className="bg-white/90 hover:bg-white text-[#1F2937] px-3.5 py-1.5 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5"
                           >
-                            <UploadCloud className="w-3.5 h-3.5 text-[#C65D7B]" />
+                            <UploadCloud className="w-3.5 h-3.5 text-[#FA4D89]" />
                             <span>{uploadingImage === item.name ? 'Uploading...' : 'Replace Photo'}</span>
                           </button>
                         </div>
@@ -424,37 +424,37 @@ const ContentPage: React.FC = () => {
                     </div>
 
                     {/* Category Label */}
-                    <span className="text-[11px] font-semibold tracking-wider text-[#C65D7B] bg-[#F7E5E9] px-3 py-0.5 rounded-full inline-block mb-2.5">
+                    <span className="text-[11px] font-semibold tracking-wider text-[#FA4D89] bg-[#FFF0F5] px-3 py-0.5 rounded-full inline-block mb-2.5">
                       {item.category || 'Beauty Care'}
                     </span>
 
                     {/* Service Name */}
-                    <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#29232A] mb-2 leading-snug group-hover:text-[#C65D7B] transition-colors">
+                    <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#1F2937] mb-2 leading-snug group-hover:text-[#FA4D89] transition-colors">
                       {item.name}
                     </h3>
 
                     {/* Short Description */}
-                    <p className="text-xs sm:text-sm text-[#6E6270] leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed mb-4">
                       {item.desc}
                     </p>
 
                     {/* Special Benefit Highlight (Crucial for Bridal Makeup) */}
                     {specialBenefit && (
-                      <div className="mb-4 p-3 bg-[#F7E5E9]/70 border border-[#E8A0B1] rounded-2xl flex items-start gap-2.5">
-                        <Gift className="w-4 h-4 text-[#C65D7B] shrink-0 mt-0.5" />
-                        <div className="text-xs text-[#29232A]">
-                          <span className="font-bold text-[#C65D7B] block">Special Bridal Benefit:</span>
-                          <span className="text-[#6E6270] leading-snug">{specialBenefit}</span>
+                      <div className="mb-4 p-3 bg-[#FFF0F5]/70 border border-[#F9A8D4] rounded-2xl flex items-start gap-2.5">
+                        <Gift className="w-4 h-4 text-[#FA4D89] shrink-0 mt-0.5" />
+                        <div className="text-xs text-[#1F2937]">
+                          <span className="font-bold text-[#FA4D89] block">Special Bridal Benefit:</span>
+                          <span className="text-[#4B5563] leading-snug">{specialBenefit}</span>
                         </div>
                       </div>
                     )}
 
                     {/* Features checklist if present */}
                     {Array.isArray(item.includes) && item.includes.length > 0 && !specialBenefit && (
-                      <div className="space-y-1.5 mb-5 pt-3 border-t border-[#F2DCE2]/80">
+                      <div className="space-y-1.5 mb-5 pt-3 border-t border-[#FCE7F0]/80">
                         {item.includes.slice(0, 3).map((inc, i) => (
-                          <div key={i} className="flex items-center gap-2 text-xs text-[#29232A]">
-                            <Check className="w-3.5 h-3.5 text-[#C65D7B] shrink-0" />
+                          <div key={i} className="flex items-center gap-2 text-xs text-[#1F2937]">
+                            <Check className="w-3.5 h-3.5 text-[#FA4D89] shrink-0" />
                             <span className="truncate">{inc}</span>
                           </div>
                         ))}
@@ -463,10 +463,10 @@ const ContentPage: React.FC = () => {
                   </div>
 
                   {/* Price & Action Row */}
-                  <div className="pt-4 border-t border-[#F2DCE2] flex items-center justify-between gap-3">
+                  <div className="pt-4 border-t border-[#FCE7F0] flex items-center justify-between gap-3">
                     <div>
-                      <span className="text-[10px] text-[#6E6270] block uppercase tracking-wider">Price</span>
-                      <span className="font-serif font-bold text-lg text-[#C65D7B]">
+                      <span className="text-[10px] text-[#4B5563] block uppercase tracking-wider">Price</span>
+                      <span className="font-serif font-bold text-lg text-[#FA4D89]">
                         {isContactPricing ? 'Contact for Pricing' : item.price}
                       </span>
                     </div>
@@ -475,7 +475,7 @@ const ContentPage: React.FC = () => {
                       to={`/book?service=${encodeURIComponent(item.name)}&price=${encodeURIComponent(isContactPricing ? 'Contact for Pricing' : item.price)}`}
                       className="shrink-0"
                     >
-                      <button className="bg-[#C65D7B] hover:bg-[#B24B68] text-white font-semibold py-2.5 px-5 rounded-full transition-all duration-200 text-xs sm:text-sm flex items-center gap-2 shadow-salon hover:shadow-salon-hover hover:-translate-y-0.5">
+                      <button className="bg-[#FA4D89] hover:bg-[#E11D74] text-white font-semibold py-2.5 px-5 rounded-full transition-all duration-200 text-xs sm:text-sm flex items-center gap-2 shadow-salon hover:shadow-salon-hover hover:-translate-y-0.5">
                         <CalendarCheck className="w-4 h-4" />
                         <span>Book Appointment</span>
                       </button>
@@ -488,12 +488,12 @@ const ContentPage: React.FC = () => {
         )}
 
         {/* FAQs Section */}
-        <div className="mt-24 max-w-3xl mx-auto pt-16 border-t border-[#F2DCE2]">
+        <div className="mt-24 max-w-3xl mx-auto pt-16 border-t border-[#FCE7F0]">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl font-bold text-[#29232A]">
+            <h2 className="font-serif text-3xl font-bold text-[#1F2937]">
               Frequently Asked Questions
             </h2>
-            <p className="text-[#6E6270] text-xs sm:text-sm mt-1">
+            <p className="text-[#4B5563] text-xs sm:text-sm mt-1">
               Have questions about booking or treatments? We're here to help.
             </p>
           </div>
@@ -502,20 +502,20 @@ const ContentPage: React.FC = () => {
             {faqs.map((faq, idx) => (
               <div 
                 key={idx} 
-                className="bg-white rounded-2xl border border-[#F2DCE2] shadow-2xs overflow-hidden transition"
+                className="bg-white rounded-2xl border border-[#FCE7F0] shadow-2xs overflow-hidden transition"
               >
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#FFF8F6] transition"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#FFF9FA] transition"
                 >
-                  <span className="text-sm font-semibold text-[#29232A]">{faq.q}</span>
-                  <span className={`text-[#C65D7B] text-lg font-bold transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
+                  <span className="text-sm font-semibold text-[#1F2937]">{faq.q}</span>
+                  <span className={`text-[#FA4D89] text-lg font-bold transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
                     +
                   </span>
                 </button>
                 {openFaq === idx && (
-                  <div className="px-6 pb-4 pt-1 text-sm text-[#6E6270] border-t border-[#F2DCE2]/50 leading-relaxed bg-[#FFF8F6]/40">
+                  <div className="px-6 pb-4 pt-1 text-sm text-[#4B5563] border-t border-[#FCE7F0]/50 leading-relaxed bg-[#FFF9FA]/40">
                     {faq.a}
                   </div>
                 )}

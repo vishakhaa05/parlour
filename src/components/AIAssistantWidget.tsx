@@ -194,15 +194,15 @@ const AIAssistantWidget: React.FC = () => {
       if (!line.trim()) return <div key={idx} className="h-2" />;
 
       if (line.startsWith('### ')) {
-        return <h4 key={idx} className="font-bold text-[#29232A] mt-2 mb-1 text-sm">{line.replace('### ', '')}</h4>;
+        return <h4 key={idx} className="font-bold text-[#1F2937] mt-2 mb-1 text-sm">{line.replace('### ', '')}</h4>;
       }
       if (line.startsWith('## ')) {
-        return <h3 key={idx} className="font-bold text-[#29232A] mt-2.5 mb-1 text-base">{line.replace('## ', '')}</h3>;
+        return <h3 key={idx} className="font-bold text-[#1F2937] mt-2.5 mb-1 text-base">{line.replace('## ', '')}</h3>;
       }
       if (line.startsWith('* ') || line.startsWith('- ')) {
         return (
           <div key={idx} className="flex items-start gap-1.5 my-0.5 ml-1">
-            <span className="text-[#C65D7B] font-bold">•</span>
+            <span className="text-[#FA4D89] font-bold">•</span>
             <span>{renderInlineStyles(line.substring(2), `li-${idx}`)}</span>
           </div>
         );
@@ -216,10 +216,10 @@ const AIAssistantWidget: React.FC = () => {
     const parts = content.split(/(\*\*.*?\*\*|\*.*?\*)/g);
     return parts.map((chunk, i) => {
       if (chunk.startsWith('**') && chunk.endsWith('**')) {
-        return <strong key={`${keyPrefix}-${i}`} className="font-semibold text-[#29232A]">{chunk.slice(2, -2)}</strong>;
+        return <strong key={`${keyPrefix}-${i}`} className="font-semibold text-[#1F2937]">{chunk.slice(2, -2)}</strong>;
       }
       if (chunk.startsWith('*') && chunk.endsWith('*')) {
-        return <em key={`${keyPrefix}-${i}`} className="text-[#6E6270]">{chunk.slice(1, -1)}</em>;
+        return <em key={`${keyPrefix}-${i}`} className="text-[#4B5563]">{chunk.slice(1, -1)}</em>;
       }
       return chunk;
     });
@@ -240,7 +240,7 @@ const AIAssistantWidget: React.FC = () => {
         onClick={() => setIsOpen(true)}
         title="Beauty Consultant & Support"
         aria-label="Open Beauty Consultant and Support"
-        className={`fixed bottom-6 right-6 p-4 bg-[#C65D7B] hover:bg-[#B24B68] text-white rounded-full shadow-salon hover:shadow-salon-hover hover:scale-105 transition-all duration-300 z-50 flex items-center justify-center ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'}`}
+        className={`fixed bottom-6 right-6 p-4 bg-[#FA4D89] hover:bg-[#E11D74] text-white rounded-full shadow-salon hover:shadow-salon-hover hover:scale-105 transition-all duration-300 z-50 flex items-center justify-center ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'}`}
       >
         <div className="relative">
           <MessageSquare className="w-6 h-6" />
@@ -249,10 +249,10 @@ const AIAssistantWidget: React.FC = () => {
       </button>
 
       {/* Chat Window */}
-      <div className={`fixed bottom-4 sm:bottom-6 right-3 sm:right-6 w-[calc(100vw-24px)] sm:w-96 bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 z-50 flex flex-col border border-[#F2DCE2] ${isOpen ? 'opacity-100 translate-y-0 h-[560px] max-h-[85vh]' : 'opacity-0 translate-y-10 h-0 pointer-events-none'}`}>
+      <div className={`fixed bottom-4 sm:bottom-6 right-3 sm:right-6 w-[calc(100vw-24px)] sm:w-96 bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 z-50 flex flex-col border border-[#FCE7F0] ${isOpen ? 'opacity-100 translate-y-0 h-[560px] max-h-[85vh]' : 'opacity-0 translate-y-10 h-0 pointer-events-none'}`}>
         
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#C65D7B] to-[#D87491] p-4 text-white flex justify-between items-center shadow-sm">
+        <div className="bg-gradient-to-r from-[#FA4D89] to-[#D87491] p-4 text-white flex justify-between items-center shadow-sm">
           <div className="flex items-center gap-2.5">
             <div className="p-2 bg-white/20 backdrop-blur-sm rounded-xl">
               <Sparkles className="w-4 h-4 text-white" />
@@ -293,8 +293,8 @@ const AIAssistantWidget: React.FC = () => {
         </div>
 
         {/* WhatsApp Banner */}
-        <div className="bg-[#FFF8F6] px-3.5 py-1.5 border-b border-[#F2DCE2] flex items-center justify-between text-xs text-[#29232A]">
-          <span className="text-[11px] text-[#6E6270]">Need direct human assistance?</span>
+        <div className="bg-[#FFF9FA] px-3.5 py-1.5 border-b border-[#FCE7F0] flex items-center justify-between text-xs text-[#1F2937]">
+          <span className="text-[11px] text-[#4B5563]">Need direct human assistance?</span>
           <a
             href={whatsappUrl}
             target="_blank"
@@ -307,13 +307,13 @@ const AIAssistantWidget: React.FC = () => {
         </div>
 
         {/* Chat Area */}
-        <div className="flex-1 p-3.5 overflow-y-auto bg-[#FFF8F6]/40 flex flex-col gap-3 text-xs sm:text-sm">
+        <div className="flex-1 p-3.5 overflow-y-auto bg-[#FFF9FA]/40 flex flex-col gap-3 text-xs sm:text-sm">
           {messages.map((msg) => (
             <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`max-w-[85%] p-3.5 rounded-2xl ${msg.sender === 'user' ? 'bg-[#C65D7B] text-white rounded-br-xs shadow-sm' : 'bg-white text-[#29232A] shadow-sm rounded-bl-xs border border-[#F2DCE2]'}`}>
+              <div className={`max-w-[85%] p-3.5 rounded-2xl ${msg.sender === 'user' ? 'bg-[#FA4D89] text-white rounded-br-xs shadow-sm' : 'bg-white text-[#1F2937] shadow-sm rounded-bl-xs border border-[#FCE7F0]'}`}>
                 {msg.isImage && msg.imageUrl ? (
                   <div className="space-y-2">
-                    <img src={msg.imageUrl} alt="Uploaded face" className="w-44 h-32 object-cover rounded-xl border border-[#F2DCE2]" />
+                    <img src={msg.imageUrl} alt="Uploaded face" className="w-44 h-32 object-cover rounded-xl border border-[#FCE7F0]" />
                     <p className="text-[11px] opacity-90 italic">Uploaded photo for analysis</p>
                   </div>
                 ) : (
@@ -322,8 +322,8 @@ const AIAssistantWidget: React.FC = () => {
                   </div>
                 )}
                 {msg.source && msg.sender === 'ai' && (
-                  <div className="mt-2 pt-1 border-t border-gray-100 text-[10px] text-[#6E6270] flex items-center gap-1">
-                    <Sparkles className="w-2.5 h-2.5 text-[#C65D7B]" />
+                  <div className="mt-2 pt-1 border-t border-gray-100 text-[10px] text-[#4B5563] flex items-center gap-1">
+                    <Sparkles className="w-2.5 h-2.5 text-[#FA4D89]" />
                     <span>
                       {msg.source === 'gemini' || msg.source === 'gemini-vision' ? 'Powered by AI Beauty Expert' : 'Shree Ambika Beauty Advisor'}
                     </span>
@@ -335,9 +335,9 @@ const AIAssistantWidget: React.FC = () => {
 
           {isTyping && (
             <div className="flex justify-start">
-              <div className="bg-white p-3 rounded-2xl shadow-sm rounded-bl-xs border border-[#F2DCE2] flex items-center gap-2">
-                <Loader2 className="w-4 h-4 text-[#C65D7B] animate-spin" />
-                <span className="text-xs text-[#6E6270] italic">Advisor is typing...</span>
+              <div className="bg-white p-3 rounded-2xl shadow-sm rounded-bl-xs border border-[#FCE7F0] flex items-center gap-2">
+                <Loader2 className="w-4 h-4 text-[#FA4D89] animate-spin" />
+                <span className="text-xs text-[#4B5563] italic">Advisor is typing...</span>
               </div>
             </div>
           )}
@@ -345,11 +345,11 @@ const AIAssistantWidget: React.FC = () => {
         </div>
 
         {/* Quick Suggestion Pills */}
-        <div className="px-3 py-2 bg-[#FFF8F6] border-t border-[#F2DCE2] overflow-x-auto scrollbar-none flex items-center gap-1.5 whitespace-nowrap">
+        <div className="px-3 py-2 bg-[#FFF9FA] border-t border-[#FCE7F0] overflow-x-auto scrollbar-none flex items-center gap-1.5 whitespace-nowrap">
           <button
             type="button"
             onClick={() => photoInputRef.current?.click()}
-            className="flex items-center gap-1 px-2.5 py-1 bg-white hover:bg-[#F7E5E9] border border-[#F2DCE2] rounded-full text-[11px] font-semibold text-[#C65D7B] transition shrink-0"
+            className="flex items-center gap-1 px-2.5 py-1 bg-white hover:bg-[#FFF0F5] border border-[#FCE7F0] rounded-full text-[11px] font-semibold text-[#FA4D89] transition shrink-0"
           >
             <Camera className="w-3 h-3" />
             <span>Skin Photo Scan</span>
@@ -360,7 +360,7 @@ const AIAssistantWidget: React.FC = () => {
               type="button"
               disabled={isTyping}
               onClick={() => sendQuery(s.query)}
-              className="px-2.5 py-1 bg-white hover:bg-[#F7E5E9] border border-[#F2DCE2] rounded-full text-[11px] font-medium text-[#29232A] hover:text-[#C65D7B] transition shrink-0 disabled:opacity-50"
+              className="px-2.5 py-1 bg-white hover:bg-[#FFF0F5] border border-[#FCE7F0] rounded-full text-[11px] font-medium text-[#1F2937] hover:text-[#FA4D89] transition shrink-0 disabled:opacity-50"
             >
               {s.label}
             </button>
@@ -368,13 +368,13 @@ const AIAssistantWidget: React.FC = () => {
         </div>
 
         {/* Input Area */}
-        <div className="p-3 bg-white border-t border-[#F2DCE2] flex items-center gap-2">
+        <div className="p-3 bg-white border-t border-[#FCE7F0] flex items-center gap-2">
           <button 
             type="button"
             onClick={() => photoInputRef.current?.click()}
             title="Upload photo for skin analysis"
             disabled={isTyping}
-            className="p-2 text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9] rounded-full transition disabled:opacity-50"
+            className="p-2 text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5] rounded-full transition disabled:opacity-50"
           >
             <ImageIcon className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
@@ -385,14 +385,14 @@ const AIAssistantWidget: React.FC = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSendText()}
             placeholder="Ask about treatments, bridal, hair..."
-            className="flex-1 px-3.5 py-2.5 bg-[#FFF8F6] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30 text-xs sm:text-sm disabled:opacity-60 border border-[#F2DCE2] focus:bg-white transition"
+            className="flex-1 px-3.5 py-2.5 bg-[#FFF9FA] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30 text-xs sm:text-sm disabled:opacity-60 border border-[#FCE7F0] focus:bg-white transition"
           />
           <button 
             type="button"
             onClick={handleSendText}
             disabled={!input.trim() || isTyping}
             title="Send Message"
-            className="p-2.5 bg-[#C65D7B] hover:bg-[#B24B68] text-white rounded-full transition disabled:opacity-50 shadow-sm"
+            className="p-2.5 bg-[#FA4D89] hover:bg-[#E11D74] text-white rounded-full transition disabled:opacity-50 shadow-sm"
           >
             <Send className="w-4 h-4" />
           </button>

@@ -8,28 +8,29 @@ export default {
     extend: {
       colors: {
         salon: {
-          bg: '#FFF8F6',
-          blush: '#F7E5E9',
-          rose: '#E8A0B1',
-          primary: '#C65D7B',
-          primaryHover: '#B24B68',
-          text: '#29232A',
-          muted: '#6E6270',
-          border: '#F2DCE2',
+          bg: '#FFF9FA',
+          blush: '#FFF0F5',
+          rose: '#F9A8D4',
+          primary: '#FA4D89',
+          primaryHover: '#E11D74',
+          text: '#1F2937',
+          muted: '#4B5563',
+          border: '#FCE7F0',
           card: '#FFFFFF',
-          dark: '#1E1920',
+          dark: '#111827',
+          slate: '#4B5563',
         },
-        pinky: '#C65D7B',
-        softGray: '#FFF8F6',
-        darkGray: '#29232A',
+        pinky: '#FA4D89',
+        softGray: '#FFF9FA',
+        darkGray: '#1F2937',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
-        'salon': '0 10px 30px -10px rgba(198, 93, 123, 0.12)',
-        'salon-hover': '0 20px 35px -10px rgba(198, 93, 123, 0.2)',
+        'salon': '0 10px 30px -10px rgba(250, 77, 137, 0.18)',
+        'salon-hover': '0 20px 35px -10px rgba(250, 77, 137, 0.28)',
       },
       keyframes: {
         'fade-in-up': {

@@ -108,20 +108,20 @@ const ReviewsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white border-b border-[#F2DCE2]/60">
+    <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white border-b border-[#FCE7F0]/60">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full mb-3">
-              <Star className="w-3.5 h-3.5 fill-[#C65D7B] text-[#C65D7B]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full mb-3">
+              <Star className="w-3.5 h-3.5 fill-[#FA4D89] text-[#FA4D89]" />
               <span>Client Testimonials</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#29232A] leading-tight">
-              Words from Our <span className="text-[#C65D7B] italic">Cherished Guests</span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1F2937] leading-tight">
+              Words from Our <span className="text-[#FA4D89] italic">Cherished Guests</span>
             </h2>
-            <p className="text-[#6E6270] text-sm sm:text-base mt-2 leading-relaxed">
+            <p className="text-[#4B5563] text-sm sm:text-base mt-2 leading-relaxed">
               Authentic reviews from clients who experienced our mindful beauty care and bridal artistry.
             </p>
           </div>
@@ -129,7 +129,7 @@ const ReviewsSection: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowAddModal(true)}
-            className="inline-flex items-center gap-2 bg-[#F7E5E9] hover:bg-[#E8A0B1]/30 text-[#C65D7B] font-semibold px-5 py-2.5 rounded-full border border-[#E8A0B1] shadow-2xs transition text-xs sm:text-sm shrink-0"
+            className="inline-flex items-center gap-2 bg-[#FFF0F5] hover:bg-[#F9A8D4]/30 text-[#FA4D89] font-semibold px-5 py-2.5 rounded-full border border-[#F9A8D4] shadow-2xs transition text-xs sm:text-sm shrink-0"
           >
             <Plus className="w-4 h-4" />
             <span>Share Your Experience</span>
@@ -141,7 +141,7 @@ const ReviewsSection: React.FC = () => {
           {reviews.slice(0, 6).map((rev, idx) => (
             <div
               key={rev._id || idx}
-              className="bg-[#FFF8F6] rounded-3xl p-7 border border-[#F2DCE2] shadow-sm hover:shadow-salon transition-all duration-300 flex flex-col justify-between h-full"
+              className="bg-[#FFF9FA] rounded-3xl p-7 border border-[#FCE7F0] shadow-sm hover:shadow-salon transition-all duration-300 flex flex-col justify-between h-full"
             >
               <div>
                 {/* Rating and Quote */}
@@ -154,18 +154,18 @@ const ReviewsSection: React.FC = () => {
                       />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-[#E8A0B1]/40" />
+                  <Quote className="w-6 h-6 text-[#F9A8D4]/40" />
                 </div>
 
-                <p className="text-[#29232A] text-sm leading-relaxed mb-6 font-normal">
+                <p className="text-[#1F2937] text-sm leading-relaxed mb-6 font-normal">
                   "{rev.comment}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#F2DCE2] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#FCE7F0] flex items-center justify-between">
                 <div>
-                  <h4 className="font-serif font-bold text-[#29232A] text-base">{rev.author}</h4>
-                  <span className="text-[11px] text-[#C65D7B] font-medium block mt-0.5">{rev.service}</span>
+                  <h4 className="font-serif font-bold text-[#1F2937] text-base">{rev.author}</h4>
+                  <span className="text-[11px] text-[#FA4D89] font-medium block mt-0.5">{rev.service}</span>
                 </div>
                 {rev.verified && (
                   <span className="text-[10px] bg-emerald-50 text-emerald-800 px-2.5 py-0.5 rounded-full border border-emerald-200 font-semibold flex items-center gap-1">
@@ -180,17 +180,17 @@ const ReviewsSection: React.FC = () => {
         {/* Write Review Modal */}
         {showAddModal && (
           <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
-            <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-[#F2DCE2]">
-              <div className="flex items-center justify-between pb-4 border-b border-[#F2DCE2] mb-5">
+            <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-[#FCE7F0]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#FCE7F0] mb-5">
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-[#29232A]">
+                  <h3 className="font-serif text-xl font-bold text-[#1F2937]">
                     Share Your Experience
                   </h3>
-                  <p className="text-xs text-[#6E6270]">We value your feedback and care</p>
+                  <p className="text-xs text-[#4B5563]">We value your feedback and care</p>
                 </div>
                 <button 
                   onClick={() => setShowAddModal(false)} 
-                  className="p-1.5 text-[#6E6270] hover:text-[#29232A] rounded-full hover:bg-[#F7E5E9]"
+                  className="p-1.5 text-[#4B5563] hover:text-[#1F2937] rounded-full hover:bg-[#FFF0F5]"
                   aria-label="Close review modal"
                 >
                   <X className="w-5 h-5" />
@@ -199,30 +199,30 @@ const ReviewsSection: React.FC = () => {
 
               <form onSubmit={handleSubmitReview} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">Your Name *</label>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">Your Name *</label>
                   <input
                     type="text"
                     required
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     placeholder="e.g. Aditi Sharma"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">Service Received</label>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">Service Received</label>
                   <input
                     type="text"
                     value={service}
                     onChange={(e) => setService(e.target.value)}
                     placeholder="e.g. Glowing Facial Therapy, HD Bridal"
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">Rating</label>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">Rating</label>
                   <div className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((num) => (
                       <button
@@ -230,10 +230,10 @@ const ReviewsSection: React.FC = () => {
                         key={num}
                         onClick={() => setRating(num)}
                         className={`flex-1 py-2 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1 ${
-                          rating >= num ? 'bg-[#F7E5E9] border-[#C65D7B] text-[#C65D7B]' : 'bg-[#FFF8F6] border-[#F2DCE2] text-[#6E6270]'
+                          rating >= num ? 'bg-[#FFF0F5] border-[#FA4D89] text-[#FA4D89]' : 'bg-[#FFF9FA] border-[#FCE7F0] text-[#4B5563]'
                         }`}
                       >
-                        <Star className={`w-3.5 h-3.5 ${rating >= num ? 'fill-[#C65D7B] text-[#C65D7B]' : 'text-gray-300'}`} />
+                        <Star className={`w-3.5 h-3.5 ${rating >= num ? 'fill-[#FA4D89] text-[#FA4D89]' : 'text-gray-300'}`} />
                         <span>{num}</span>
                       </button>
                     ))}
@@ -241,14 +241,14 @@ const ReviewsSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">Your Feedback *</label>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">Your Feedback *</label>
                   <textarea
                     rows={3}
                     required
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     placeholder="Tell us about your experience and results..."
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-xs text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-xs text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                   />
                 </div>
 
@@ -256,14 +256,14 @@ const ReviewsSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setShowAddModal(false)}
-                    className="flex-1 py-2.5 rounded-xl border border-[#F2DCE2] text-[#6E6270] font-semibold text-xs hover:bg-[#F7E5E9] transition"
+                    className="flex-1 py-2.5 rounded-xl border border-[#FCE7F0] text-[#4B5563] font-semibold text-xs hover:bg-[#FFF0F5] transition"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 py-2.5 rounded-xl bg-[#C65D7B] hover:bg-[#B24B68] text-white font-semibold text-xs shadow-salon transition flex items-center justify-center gap-1.5 disabled:opacity-50"
+                    className="flex-1 py-2.5 rounded-xl bg-[#FA4D89] hover:bg-[#E11D74] text-white font-semibold text-xs shadow-salon transition flex items-center justify-center gap-1.5 disabled:opacity-50"
                   >
                     {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Submit Testimonial'}
                   </button>

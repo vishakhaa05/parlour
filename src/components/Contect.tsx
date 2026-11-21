@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#FFF8F6] scroll-mt-20 border-b border-[#F2DCE2]/60">
+    <section id="contact" className="py-20 md:py-28 bg-[#FFF9FA] scroll-mt-20 border-b border-[#FCE7F0]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Optional standalone page back button */}
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
           <div className="mb-8">
             <button
               onClick={() => navigate('/')}
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#29232A] hover:text-[#C65D7B] bg-white px-4 py-2 rounded-full border border-[#F2DCE2] shadow-2xs transition"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89] bg-white px-4 py-2 rounded-full border border-[#FCE7F0] shadow-2xs transition"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Return to Home</span>
@@ -135,14 +135,14 @@ const Contact: React.FC = () => {
 
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Connect & Visit</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#29232A] leading-tight">
-            We Would Love to <span className="text-[#C65D7B] italic">Welcome You</span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1F2937] leading-tight">
+            We Would Love to <span className="text-[#FA4D89] italic">Welcome You</span>
           </h2>
-          <p className="text-[#6E6270] text-sm sm:text-base mt-2 leading-relaxed">
+          <p className="text-[#4B5563] text-sm sm:text-base mt-2 leading-relaxed">
             Reach out with any questions, book personalized consultations, or visit our serene parlour and spa sanctuary.
           </p>
         </div>
@@ -153,47 +153,47 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Location Card */}
-            <div className="bg-white rounded-3xl p-6 border border-[#F2DCE2] shadow-sm flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F7E5E9] flex items-center justify-center shrink-0 text-[#C65D7B]">
+            <div className="bg-white rounded-3xl p-6 border border-[#FCE7F0] shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#FFF0F5] flex items-center justify-center shrink-0 text-[#FA4D89]">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-base text-[#29232A]">Salon Address</h4>
-                <p className="text-sm text-[#6E6270] mt-1 leading-relaxed">
+                <h4 className="font-serif font-bold text-base text-[#1F2937]">Salon Address</h4>
+                <p className="text-sm text-[#4B5563] mt-1 leading-relaxed">
                   Shop No. 12, Ambika Galleria, Main Road, City Center
                 </p>
-                <span className="text-[11px] text-[#C65D7B] font-semibold block mt-1.5">
+                <span className="text-[11px] text-[#FA4D89] font-semibold block mt-1.5">
                   Centrally located with convenient parking
                 </span>
               </div>
             </div>
 
             {/* Opening Hours Card */}
-            <div className="bg-white rounded-3xl p-6 border border-[#F2DCE2] shadow-sm flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F7E5E9] flex items-center justify-center shrink-0 text-[#C65D7B]">
+            <div className="bg-white rounded-3xl p-6 border border-[#FCE7F0] shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#FFF0F5] flex items-center justify-center shrink-0 text-[#FA4D89]">
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-base text-[#29232A]">Opening Hours</h4>
-                <p className="text-sm text-[#29232A] font-semibold mt-1">
+                <h4 className="font-serif font-bold text-base text-[#1F2937]">Opening Hours</h4>
+                <p className="text-sm text-[#1F2937] font-semibold mt-1">
                   Monday – Sunday: 9:00 AM – 8:00 PM
                 </p>
-                <p className="text-xs text-[#6E6270] mt-0.5">
+                <p className="text-xs text-[#4B5563] mt-0.5">
                   Open all 7 days for your convenience & pre-booked events
                 </p>
               </div>
             </div>
 
             {/* Phone & Direct WhatsApp Card */}
-            <div className="bg-white rounded-3xl p-6 border border-[#F2DCE2] shadow-sm flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F7E5E9] flex items-center justify-center shrink-0 text-[#C65D7B]">
+            <div className="bg-white rounded-3xl p-6 border border-[#FCE7F0] shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#FFF0F5] flex items-center justify-center shrink-0 text-[#FA4D89]">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                <h4 className="font-serif font-bold text-base text-[#29232A]">Telephone & Inquiries</h4>
+                <h4 className="font-serif font-bold text-base text-[#1F2937]">Telephone & Inquiries</h4>
                 <a 
                   href="tel:+919876543210" 
-                  className="text-sm font-semibold text-[#29232A] hover:text-[#C65D7B] block mt-1"
+                  className="text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89] block mt-1"
                 >
                   +91 98765 43210
                 </a>
@@ -212,19 +212,19 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Email Card */}
-            <div className="bg-white rounded-3xl p-6 border border-[#F2DCE2] shadow-sm flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F7E5E9] flex items-center justify-center shrink-0 text-[#C65D7B]">
+            <div className="bg-white rounded-3xl p-6 border border-[#FCE7F0] shadow-sm flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#FFF0F5] flex items-center justify-center shrink-0 text-[#FA4D89]">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-serif font-bold text-base text-[#29232A]">Email Inquiries</h4>
+                <h4 className="font-serif font-bold text-base text-[#1F2937]">Email Inquiries</h4>
                 <a 
                   href="mailto:shreeambika@gmail.com" 
-                  className="text-sm font-semibold text-[#29232A] hover:text-[#C65D7B] block mt-1"
+                  className="text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89] block mt-1"
                 >
                   shreeambika@gmail.com
                 </a>
-                <span className="text-[11px] text-[#6E6270] block mt-0.5">
+                <span className="text-[11px] text-[#4B5563] block mt-0.5">
                   Replies typically within 24 hours
                 </span>
               </div>
@@ -234,7 +234,7 @@ const Contact: React.FC = () => {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-7 sm:p-9 border border-[#F2DCE2] shadow-sm relative">
+            <div className="bg-white rounded-3xl p-7 sm:p-9 border border-[#FCE7F0] shadow-sm relative">
               
               {isSubmittedSuccess && (
                 <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl flex items-start gap-3">
@@ -255,17 +255,17 @@ const Contact: React.FC = () => {
               )}
 
               <div className="mb-6">
-                <h3 className="font-serif font-bold text-2xl text-[#29232A]">
+                <h3 className="font-serif font-bold text-2xl text-[#1F2937]">
                   Send Us a Message
                 </h3>
-                <p className="text-xs sm:text-sm text-[#6E6270] mt-1">
+                <p className="text-xs sm:text-sm text-[#4B5563] mt-1">
                   Fill in your details and we will assist you promptly.
                 </p>
               </div>
 
               {/* Service Selection Tags */}
               <div className="mb-6">
-                <label className="block text-xs font-semibold text-[#29232A] uppercase tracking-wider mb-2.5">
+                <label className="block text-xs font-semibold text-[#1F2937] uppercase tracking-wider mb-2.5">
                   Service of Interest:
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -278,8 +278,8 @@ const Contact: React.FC = () => {
                         onClick={() => setServiceOfInterest(tag)}
                         className={`text-xs px-3.5 py-1.5 rounded-full font-semibold transition-all ${
                           isSelected
-                            ? 'bg-[#C65D7B] text-white shadow-2xs'
-                            : 'bg-[#FFF8F6] text-[#29232A] hover:bg-[#F7E5E9] hover:text-[#C65D7B] border border-[#F2DCE2]'
+                            ? 'bg-[#FA4D89] text-white shadow-2xs'
+                            : 'bg-[#FFF9FA] text-[#1F2937] hover:bg-[#FFF0F5] hover:text-[#FA4D89] border border-[#FCE7F0]'
                         }`}
                       >
                         {tag}
@@ -291,70 +291,70 @@ const Contact: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">
-                    Your Full Name <span className="text-[#C65D7B]">*</span>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">
+                    Your Full Name <span className="text-[#FA4D89]">*</span>
                   </label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-[#6E6270] absolute left-3.5 top-3.5" />
+                    <User className="w-4 h-4 text-[#4B5563] absolute left-3.5 top-3.5" />
                     <input
                       type="text"
                       required
                       placeholder="e.g. Priya Sharma"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#FFF8F6] border border-[#F2DCE2] rounded-xl text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30 focus:bg-white transition"
+                      className="w-full pl-10 pr-4 py-2.5 bg-[#FFF9FA] border border-[#FCE7F0] rounded-xl text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30 focus:bg-white transition"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1.5">
-                      Email Address <span className="text-[#C65D7B]">*</span>
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">
+                      Email Address <span className="text-[#FA4D89]">*</span>
                     </label>
                     <div className="relative">
-                      <Mail className="w-4 h-4 text-[#6E6270] absolute left-3.5 top-3.5" />
+                      <Mail className="w-4 h-4 text-[#4B5563] absolute left-3.5 top-3.5" />
                       <input
                         type="email"
                         required
                         placeholder="priya@example.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2.5 bg-[#FFF8F6] border border-[#F2DCE2] rounded-xl text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30 focus:bg-white transition"
+                        className="w-full pl-10 pr-4 py-2.5 bg-[#FFF9FA] border border-[#FCE7F0] rounded-xl text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30 focus:bg-white transition"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1.5">
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">
                       Phone Number (Optional)
                     </label>
                     <div className="relative">
-                      <Phone className="w-4 h-4 text-[#6E6270] absolute left-3.5 top-3.5" />
+                      <Phone className="w-4 h-4 text-[#4B5563] absolute left-3.5 top-3.5" />
                       <input
                         type="tel"
                         placeholder="+91 98765 43210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2.5 bg-[#FFF8F6] border border-[#F2DCE2] rounded-xl text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30 focus:bg-white transition"
+                        className="w-full pl-10 pr-4 py-2.5 bg-[#FFF9FA] border border-[#FCE7F0] rounded-xl text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30 focus:bg-white transition"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1.5">
-                    Your Message <span className="text-[#C65D7B]">*</span>
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1.5">
+                    Your Message <span className="text-[#FA4D89]">*</span>
                   </label>
                   <div className="relative">
-                    <MessageSquare className="w-4 h-4 text-[#6E6270] absolute left-3.5 top-3.5" />
+                    <MessageSquare className="w-4 h-4 text-[#4B5563] absolute left-3.5 top-3.5" />
                     <textarea
                       rows={4}
                       required
                       placeholder="Tell us about the treatments or appointment details you have in mind..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#FFF8F6] border border-[#F2DCE2] rounded-xl text-sm text-[#29232A] focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30 focus:bg-white transition"
+                      className="w-full pl-10 pr-4 py-2.5 bg-[#FFF9FA] border border-[#FCE7F0] rounded-xl text-sm text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30 focus:bg-white transition"
                     />
                   </div>
                 </div>
@@ -362,7 +362,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 px-6 rounded-full font-semibold text-white bg-[#C65D7B] hover:bg-[#B24B68] shadow-salon hover:shadow-salon-hover transition-all duration-200 disabled:opacity-60 flex items-center justify-center gap-2 text-sm mt-3"
+                  className="w-full py-3.5 px-6 rounded-full font-semibold text-white bg-[#FA4D89] hover:bg-[#E11D74] shadow-salon hover:shadow-salon-hover transition-all duration-200 disabled:opacity-60 flex items-center justify-center gap-2 text-sm mt-3"
                 >
                   {isSubmitting ? (
                     <>
@@ -377,8 +377,8 @@ const Contact: React.FC = () => {
                   )}
                 </button>
 
-                <div className="pt-2 text-center flex items-center justify-center gap-1.5 text-[11px] text-[#6E6270]">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#C65D7B]" />
+                <div className="pt-2 text-center flex items-center justify-center gap-1.5 text-[11px] text-[#4B5563]">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#FA4D89]" />
                   <span>Your privacy is safeguarded. We never share client contact details.</span>
                 </div>
               </form>
@@ -389,8 +389,8 @@ const Contact: React.FC = () => {
         </div>
 
         {/* FAQs */}
-        <div className="max-w-3xl mx-auto mt-20 pt-16 border-t border-[#F2DCE2]">
-          <h3 className="font-serif text-2xl font-bold text-[#29232A] text-center mb-8">
+        <div className="max-w-3xl mx-auto mt-20 pt-16 border-t border-[#FCE7F0]">
+          <h3 className="font-serif text-2xl font-bold text-[#1F2937] text-center mb-8">
             Frequently Asked Questions
           </h3>
 
@@ -398,22 +398,22 @@ const Contact: React.FC = () => {
             {FAQS.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-[#F2DCE2] shadow-2xs overflow-hidden transition"
+                className="bg-white rounded-2xl border border-[#FCE7F0] shadow-2xs overflow-hidden transition"
               >
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#FFF8F6] transition"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#FFF9FA] transition"
                 >
-                  <span className="text-sm font-semibold text-[#29232A]">
+                  <span className="text-sm font-semibold text-[#1F2937]">
                     {faq.q}
                   </span>
-                  <span className={`text-[#C65D7B] text-lg font-bold transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
+                  <span className={`text-[#FA4D89] text-lg font-bold transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
                     +
                   </span>
                 </button>
                 {openFaq === idx && (
-                  <div className="px-6 pb-4 pt-1 text-sm text-[#6E6270] border-t border-[#F2DCE2]/50 leading-relaxed bg-[#FFF8F6]/40">
+                  <div className="px-6 pb-4 pt-1 text-sm text-[#4B5563] border-t border-[#FCE7F0]/50 leading-relaxed bg-[#FFF9FA]/40">
                     {faq.a}
                   </div>
                 )}

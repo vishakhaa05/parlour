@@ -23,7 +23,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Bridal Makeup',
     tags: ['Bridal', 'HD Makeup', 'Traditional', 'Wedding Glow'],
     description: 'Flawless camera-ready bridal makeup featuring waterproof HD base, customized lip contouring, and traditional jewelry & dupatta styling.',
-    base64String: '/images/bridal-makeup.jpg',
+    base64String: '/hero.png',
     isPublished: true,
     uploadDate: '2026-10-18',
     createdAt: '2026-10-18T10:00:00.000Z'
@@ -34,7 +34,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Facials & Skincare',
     tags: ['Facials', 'Organic', 'Fruit Glow', 'Barrier Repair'],
     description: 'Deep pore vacuum extraction followed by organic fruit collagen infusion, leaving the skin visibly dewy and refreshed.',
-    base64String: '/images/facial-treatment.jpg',
+    base64String: '/image1.png',
     isPublished: true,
     uploadDate: '2026-10-19',
     createdAt: '2026-10-19T11:00:00.000Z'
@@ -45,7 +45,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Hair Styling & Spa',
     tags: ['Hair Styling', 'Keratin', 'Waves', 'Blowout'],
     description: 'Ultra-glossy Hollywood waves crafted with thermal barrier protection and organic argan shine serum.',
-    base64String: '/images/hair-styling.jpg',
+    base64String: '/image3.png',
     isPublished: true,
     uploadDate: '2026-10-20',
     createdAt: '2026-10-20T12:00:00.000Z'
@@ -56,7 +56,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Hair Styling & Spa',
     tags: ['Hair Spa', 'Head Massage', 'Scalp Care', 'Argan Oil'],
     description: 'Deep therapeutic scalp detox with warm Moroccan botanical oils and micro-mist steamer for total hair nourishment.',
-    base64String: '/images/hair-spa.jpg',
+    base64String: '/image3.png',
     isPublished: true,
     uploadDate: '2026-10-21',
     createdAt: '2026-10-21T14:30:00.000Z'
@@ -67,7 +67,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Nail Art',
     tags: ['Nail Art', 'Chrome', 'Gel Extensions', 'Manicure'],
     description: 'Hand-sculpted gel extensions with delicate mirror rose-gold chrome finish and floral nail art accents.',
-    base64String: '/images/nail-art.jpg',
+    base64String: '/image2.png',
     isPublished: true,
     uploadDate: '2026-10-22',
     createdAt: '2026-10-22T15:00:00.000Z'
@@ -78,7 +78,7 @@ const CURATED_DEFAULT_PORTFOLIO: GalleryImage[] = [
     category: 'Salon Interiors',
     tags: ['Ambiance', 'Salon', 'Sanctuary', 'Luxury'],
     description: 'A glimpse inside our serene, hygienically sanitized parlour stations equipped with state-of-the-art styling chairs and calm lighting.',
-    base64String: '/images/salon-interior.jpg',
+    base64String: '/image4.png',
     isPublished: true,
     uploadDate: '2026-10-23',
     createdAt: '2026-10-23T16:00:00.000Z'
@@ -125,9 +125,9 @@ const Gallery: React.FC = () => {
           // Format backend images: replace broken or placeholder paths if needed
           const backendImages = data.map((img, idx) => {
             let src = img.base64String;
-            if (src === '/image1.png') src = '/images/facial-treatment.jpg';
-            if (src === '/image2.png') src = '/images/hair-styling.jpg';
-            if (src === '/image3.png') src = '/images/bridal-makeup.jpg';
+            if (src === '/image1.png') src = '/image1.png';
+            if (src === '/image2.png') src = '/image3.png';
+            if (src === '/image3.png') src = '/hero.png';
             return {
               ...img,
               base64String: src || CURATED_DEFAULT_PORTFOLIO[idx % CURATED_DEFAULT_PORTFOLIO.length].base64String
@@ -285,20 +285,20 @@ const Gallery: React.FC = () => {
   });
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-[#FFF8F6] scroll-mt-20 border-b border-[#F2DCE2]/60">
+    <section id="gallery" className="py-20 md:py-28 bg-[#FFF9FA] scroll-mt-20 border-b border-[#FCE7F0]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading & Owner Action */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Real Client Transformations</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#29232A] leading-tight">
-              Beauty Portfolio & <span className="text-[#C65D7B] italic">Gallery</span>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1F2937] leading-tight">
+              Beauty Portfolio & <span className="text-[#FA4D89] italic">Gallery</span>
             </h2>
-            <p className="text-[#6E6270] text-sm sm:text-base mt-2 leading-relaxed">
+            <p className="text-[#4B5563] text-sm sm:text-base mt-2 leading-relaxed">
               Explore authentic bridal transformations, hair art, and skincare therapies completed with care at Shree Ambika.
             </p>
           </div>
@@ -315,7 +315,7 @@ const Gallery: React.FC = () => {
               <button 
                 disabled={isUploading}
                 onClick={() => fileInputRef.current?.click()}
-                className="inline-flex items-center gap-2 bg-[#C65D7B] hover:bg-[#B24B68] text-white px-5 py-2.5 rounded-full transition shadow-salon hover:shadow-salon-hover disabled:opacity-70 text-xs sm:text-sm font-semibold"
+                className="inline-flex items-center gap-2 bg-[#FA4D89] hover:bg-[#E11D74] text-white px-5 py-2.5 rounded-full transition shadow-salon hover:shadow-salon-hover disabled:opacity-70 text-xs sm:text-sm font-semibold"
               >
                 <UploadCloud className="w-4 h-4" />
                 <span>Upload Client Photo</span>
@@ -338,8 +338,8 @@ const Gallery: React.FC = () => {
                 }}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
                   isSelected
-                    ? 'bg-[#C65D7B] text-white shadow-salon'
-                    : 'bg-white text-[#29232A] hover:bg-[#F7E5E9] hover:text-[#C65D7B] border border-[#F2DCE2]'
+                    ? 'bg-[#FA4D89] text-white shadow-salon'
+                    : 'bg-white text-[#1F2937] hover:bg-[#FFF0F5] hover:text-[#FA4D89] border border-[#FCE7F0]'
                 }`}
               >
                 {cat}
@@ -351,12 +351,12 @@ const Gallery: React.FC = () => {
         {/* Active Tag Filter Indicator */}
         {activeTag && (
           <div className="mb-6 flex items-center gap-2">
-            <span className="text-xs text-[#6E6270]">Filtered by tag:</span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#F7E5E9] text-[#C65D7B] text-xs rounded-full font-semibold border border-[#E8A0B1]/40">
+            <span className="text-xs text-[#4B5563]">Filtered by tag:</span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFF0F5] text-[#FA4D89] text-xs rounded-full font-semibold border border-[#F9A8D4]/40">
               #{activeTag}
               <button 
                 onClick={() => setActiveTag(null)} 
-                className="hover:text-[#29232A] ml-1"
+                className="hover:text-[#1F2937] ml-1"
                 aria-label="Clear tag filter"
               >
                 <X className="w-3 h-3" />
@@ -367,20 +367,20 @@ const Gallery: React.FC = () => {
 
         {/* Gallery Grid */}
         {isLoading ? (
-          <div className="flex flex-col justify-center items-center py-20 text-[#C65D7B]">
+          <div className="flex flex-col justify-center items-center py-20 text-[#FA4D89]">
             <Loader2 className="w-8 h-8 animate-spin mb-2" />
-            <p className="text-[#6E6270] text-sm">Loading salon portfolio...</p>
+            <p className="text-[#4B5563] text-sm">Loading salon portfolio...</p>
           </div>
         ) : filteredImages.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-3xl border border-[#F2DCE2] p-8 shadow-xs">
-            <Sparkles className="w-10 h-10 text-[#C65D7B] mx-auto mb-3 opacity-60" />
-            <p className="font-serif font-bold text-lg text-[#29232A]">No portfolio items found in "{selectedCategory}".</p>
-            <p className="text-[#6E6270] text-xs mt-1 max-w-md mx-auto">
+          <div className="text-center py-16 bg-white rounded-3xl border border-[#FCE7F0] p-8 shadow-xs">
+            <Sparkles className="w-10 h-10 text-[#FA4D89] mx-auto mb-3 opacity-60" />
+            <p className="font-serif font-bold text-lg text-[#1F2937]">No portfolio items found in "{selectedCategory}".</p>
+            <p className="text-[#4B5563] text-xs mt-1 max-w-md mx-auto">
               Please choose another category or check back soon as new client makeovers are added.
             </p>
             <button
               onClick={() => setSelectedCategory('All')}
-              className="mt-4 px-4 py-1.5 bg-[#F7E5E9] text-[#C65D7B] rounded-full text-xs font-semibold hover:bg-[#E8A0B1]/30 transition"
+              className="mt-4 px-4 py-1.5 bg-[#FFF0F5] text-[#FA4D89] rounded-full text-xs font-semibold hover:bg-[#F9A8D4]/30 transition"
             >
               View All Photos
             </button>
@@ -391,30 +391,30 @@ const Gallery: React.FC = () => {
               <div
                 key={img._id}
                 onClick={() => setLightboxImg(img)}
-                className="overflow-hidden rounded-3xl shadow-sm hover:shadow-salon transition-all duration-300 group bg-white cursor-pointer border border-[#F2DCE2] flex flex-col justify-between"
+                className="overflow-hidden rounded-3xl shadow-sm hover:shadow-salon transition-all duration-300 group bg-white cursor-pointer border border-[#FCE7F0] flex flex-col justify-between"
               >
                 <div>
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#F7E5E9]">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#FFF0F5]">
                     <img
                       src={img.base64String}
                       alt={img.title || 'Client Transformation'}
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/images/bridal-makeup.jpg';
+                        (e.target as HTMLImageElement).src = '/hero.png';
                       }}
                     />
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4 text-white">
                       <div className="flex items-center gap-1.5 text-xs font-medium">
-                        <Eye className="w-4 h-4 text-[#E8A0B1]" />
+                        <Eye className="w-4 h-4 text-[#F9A8D4]" />
                         <span>Click to view details</span>
                       </div>
                     </div>
 
                     {/* Category badge */}
                     {img.category && (
-                      <span className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-md text-[#C65D7B] text-[11px] font-bold px-3 py-1 rounded-full shadow-xs border border-[#F2DCE2]">
+                      <span className="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-md text-[#FA4D89] text-[11px] font-bold px-3 py-1 rounded-full shadow-xs border border-[#FCE7F0]">
                         {img.category}
                       </span>
                     )}
@@ -432,16 +432,16 @@ const Gallery: React.FC = () => {
                   </div>
 
                   <div className="p-5">
-                    <h3 className="font-serif font-bold text-lg text-[#29232A] mb-1.5 group-hover:text-[#C65D7B] transition-colors leading-snug">
+                    <h3 className="font-serif font-bold text-lg text-[#1F2937] mb-1.5 group-hover:text-[#FA4D89] transition-colors leading-snug">
                       {img.title || 'Parlour Treatment Work'}
                     </h3>
-                    <p className="text-xs text-[#6E6270] line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#4B5563] line-clamp-2 leading-relaxed">
                       {img.description || 'Custom tailored parlour service completed with organic formulas.'}
                     </p>
 
                     {/* Tag list */}
                     {Array.isArray(img.tags) && img.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-[#F2DCE2]/80">
+                      <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-[#FCE7F0]/80">
                         {img.tags.slice(0, 3).map((tag, tIdx) => (
                           <span
                             key={tIdx}
@@ -449,9 +449,9 @@ const Gallery: React.FC = () => {
                               e.stopPropagation();
                               setActiveTag(tag);
                             }}
-                            className="inline-flex items-center gap-1 text-[10px] text-[#6E6270] hover:text-[#C65D7B] bg-[#FFF8F6] px-2 py-0.5 rounded-full border border-[#F2DCE2] transition"
+                            className="inline-flex items-center gap-1 text-[10px] text-[#4B5563] hover:text-[#FA4D89] bg-[#FFF9FA] px-2 py-0.5 rounded-full border border-[#FCE7F0] transition"
                           >
-                            <Tag className="w-2.5 h-2.5 text-[#C65D7B]" />
+                            <Tag className="w-2.5 h-2.5 text-[#FA4D89]" />
                             <span>{tag}</span>
                           </span>
                         ))}
@@ -460,12 +460,12 @@ const Gallery: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="px-5 pb-4 pt-1 flex items-center justify-between text-[11px] text-[#6E6270]">
+                <div className="px-5 pb-4 pt-1 flex items-center justify-between text-[11px] text-[#4B5563]">
                   <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-[#E8A0B1]" />
+                    <Calendar className="w-3 h-3 text-[#F9A8D4]" />
                     <span>{img.uploadDate || 'Recent Work'}</span>
                   </span>
-                  <span className="text-[#C65D7B] font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
+                  <span className="text-[#FA4D89] font-semibold text-xs group-hover:translate-x-0.5 transition-transform">
                     View &rarr;
                   </span>
                 </div>
@@ -484,7 +484,7 @@ const Gallery: React.FC = () => {
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#F2DCE2] max-h-[90vh] flex flex-col"
+            className="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#FCE7F0] max-h-[90vh] flex flex-col"
           >
             <div className="relative aspect-video sm:aspect-[16/10] bg-black overflow-hidden flex items-center justify-center">
               <img
@@ -503,29 +503,29 @@ const Gallery: React.FC = () => {
 
             <div className="p-6 overflow-y-auto">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span className="text-xs font-semibold text-[#C65D7B] bg-[#F7E5E9] px-3 py-1 rounded-full border border-[#E8A0B1]/40">
+                <span className="text-xs font-semibold text-[#FA4D89] bg-[#FFF0F5] px-3 py-1 rounded-full border border-[#F9A8D4]/40">
                   {lightboxImg.category || 'Beauty Care'}
                 </span>
                 {lightboxImg.uploadDate && (
-                  <span className="text-xs text-[#6E6270] flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#E8A0B1]" />
+                  <span className="text-xs text-[#4B5563] flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5 text-[#F9A8D4]" />
                     {lightboxImg.uploadDate}
                   </span>
                 )}
               </div>
 
-              <h3 className="font-serif font-bold text-2xl text-[#29232A] mb-2">
+              <h3 className="font-serif font-bold text-2xl text-[#1F2937] mb-2">
                 {lightboxImg.title || 'Client Transformation'}
               </h3>
 
-              <p className="text-sm text-[#6E6270] leading-relaxed mb-4">
+              <p className="text-sm text-[#4B5563] leading-relaxed mb-4">
                 {lightboxImg.description || 'Custom tailored parlour service completed with organic formulas.'}
               </p>
 
               {Array.isArray(lightboxImg.tags) && lightboxImg.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 pt-3 border-t border-[#F2DCE2]">
+                <div className="flex flex-wrap gap-2 pt-3 border-t border-[#FCE7F0]">
                   {lightboxImg.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs text-[#6E6270] bg-[#FFF8F6] border border-[#F2DCE2] px-2.5 py-1 rounded-full">
+                    <span key={idx} className="text-xs text-[#4B5563] bg-[#FFF9FA] border border-[#FCE7F0] px-2.5 py-1 rounded-full">
                       #{tag}
                     </span>
                   ))}
@@ -539,39 +539,39 @@ const Gallery: React.FC = () => {
       {/* Admin Upload Modal */}
       {showUploadModal && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-[#F2DCE2] max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-[#FCE7F0] max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="font-serif font-bold text-xl text-[#29232A]">Upload Treatment Photo</h3>
-              <button onClick={() => setShowUploadModal(false)} className="text-[#6E6270] hover:text-[#29232A]">
+              <h3 className="font-serif font-bold text-xl text-[#1F2937]">Upload Treatment Photo</h3>
+              <button onClick={() => setShowUploadModal(false)} className="text-[#4B5563] hover:text-[#1F2937]">
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {previewBase64 && (
-              <div className="mb-4 rounded-2xl overflow-hidden aspect-video bg-[#F7E5E9]">
+              <div className="mb-4 rounded-2xl overflow-hidden aspect-video bg-[#FFF0F5]">
                 <img src={previewBase64} alt="Preview" className="w-full h-full object-cover" />
               </div>
             )}
 
             <form onSubmit={handleUploadSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-[#29232A] mb-1">Title</label>
+                <label className="block text-xs font-semibold text-[#1F2937] mb-1">Title</label>
                 <input
                   type="text"
                   required
                   placeholder="e.g. Bridal Glam Transformation"
                   value={uploadTitle}
                   onChange={(e) => setUploadTitle(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#29232A] mb-1">Category</label>
+                <label className="block text-xs font-semibold text-[#1F2937] mb-1">Category</label>
                 <select
                   value={uploadCategory}
                   onChange={(e) => setUploadCategory(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                 >
                   {CATEGORIES.filter(c => c !== 'All').map(c => (
                     <option key={c} value={c}>{c}</option>
@@ -580,24 +580,24 @@ const Gallery: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#29232A] mb-1">Tags (comma-separated)</label>
+                <label className="block text-xs font-semibold text-[#1F2937] mb-1">Tags (comma-separated)</label>
                 <input
                   type="text"
                   placeholder="e.g. Bridal, HD Makeup, Traditional"
                   value={uploadTags}
                   onChange={(e) => setUploadTags(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#29232A] mb-1">Description</label>
+                <label className="block text-xs font-semibold text-[#1F2937] mb-1">Description</label>
                 <textarea
                   rows={3}
                   placeholder="Brief note about the products and styling used..."
                   value={uploadDescription}
                   onChange={(e) => setUploadDescription(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:outline-none focus:ring-2 focus:ring-[#C65D7B]/30"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:outline-none focus:ring-2 focus:ring-[#FA4D89]/30"
                 />
               </div>
 
@@ -605,14 +605,14 @@ const Gallery: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setShowUploadModal(false)}
-                  className="px-4 py-2 rounded-xl text-sm font-semibold text-[#6E6270] hover:bg-[#F7E5E9]"
+                  className="px-4 py-2 rounded-xl text-sm font-semibold text-[#4B5563] hover:bg-[#FFF0F5]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isUploading}
-                  className="px-6 py-2.5 rounded-xl bg-[#C65D7B] hover:bg-[#B24B68] text-white text-sm font-semibold shadow-salon disabled:opacity-50"
+                  className="px-6 py-2.5 rounded-xl bg-[#FA4D89] hover:bg-[#E11D74] text-white text-sm font-semibold shadow-salon disabled:opacity-50"
                 >
                   {isUploading ? 'Publishing...' : 'Publish to Gallery'}
                 </button>

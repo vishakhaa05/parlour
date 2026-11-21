@@ -5,13 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #FFF8F6;
-    color: #29232A;
+    background-color: #FFF9FA;
+    color: #1F2937;
   }
 
   body {
-    background-color: #FFF8F6;
-    color: #29232A;
+    background-color: #FFF9FA;
+    color: #1F2937;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -30,16 +30,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF8F6;
+  background: #FFF9FA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E8A0B1;
+  background: #F9A8D4;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C65D7B;
+  background: #FA4D89;
 }
 
 /* Section scroll margin for sticky navbar offset */

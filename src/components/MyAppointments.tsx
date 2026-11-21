@@ -191,7 +191,7 @@ const MyAppointments: React.FC = () => {
       case 'Pending':
         return <span className="px-3 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full text-xs font-semibold">Pending Review</span>;
       case 'Completed':
-        return <span className="px-3 py-1 bg-[#F7E5E9] text-[#C65D7B] border border-[#E8A0B1]/40 rounded-full text-xs font-semibold">Completed</span>;
+        return <span className="px-3 py-1 bg-[#FFF0F5] text-[#FA4D89] border border-[#F9A8D4]/40 rounded-full text-xs font-semibold">Completed</span>;
       case 'Cancelled':
         return <span className="px-3 py-1 bg-red-50 text-red-700 border border-red-200 rounded-full text-xs font-semibold">Cancelled</span>;
       default:
@@ -201,23 +201,23 @@ const MyAppointments: React.FC = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-[70vh] bg-[#FFF8F6] py-20 px-6 flex items-center justify-center">
-        <div className="max-w-md w-full bg-white p-8 rounded-3xl shadow-salon text-center border border-[#F2DCE2]">
-          <Calendar className="w-16 h-16 text-[#C65D7B] mx-auto mb-4" />
-          <h2 className="font-serif text-2xl font-bold text-[#29232A] mb-2">My Appointments</h2>
-          <p className="text-[#6E6270] text-sm mb-6 leading-relaxed">
+      <div className="min-h-[70vh] bg-[#FFF9FA] py-20 px-6 flex items-center justify-center">
+        <div className="max-w-md w-full bg-white p-8 rounded-3xl shadow-salon text-center border border-[#FCE7F0]">
+          <Calendar className="w-16 h-16 text-[#FA4D89] mx-auto mb-4" />
+          <h2 className="font-serif text-2xl font-bold text-[#1F2937] mb-2">My Appointments</h2>
+          <p className="text-[#4B5563] text-sm mb-6 leading-relaxed">
             Please sign in to view your scheduled beauty treatments, booking references, and manage your appointments.
           </p>
           <div className="flex flex-col gap-3">
             <button
               onClick={() => openAuthModal('login')}
-              className="w-full bg-[#C65D7B] hover:bg-[#B24B68] text-white font-semibold py-3 rounded-xl transition shadow-salon text-sm"
+              className="w-full bg-[#FA4D89] hover:bg-[#E11D74] text-white font-semibold py-3 rounded-xl transition shadow-salon text-sm"
             >
               Sign In to Your Account
             </button>
             <button
               onClick={() => openAuthModal('register')}
-              className="w-full bg-[#F7E5E9] hover:bg-[#E8A0B1]/30 text-[#C65D7B] font-semibold py-3 rounded-xl transition border border-[#E8A0B1] text-sm"
+              className="w-full bg-[#FFF0F5] hover:bg-[#F9A8D4]/30 text-[#FA4D89] font-semibold py-3 rounded-xl transition border border-[#F9A8D4] text-sm"
             >
               Create New Account
             </button>
@@ -228,38 +228,38 @@ const MyAppointments: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFF8F6] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FFF9FA] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         
         {/* Header Breadcrumb & Title */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
           <div>
-            <Link to="/" className="inline-flex items-center text-xs font-semibold text-[#C65D7B] hover:text-[#B24B68] mb-2 transition">
+            <Link to="/" className="inline-flex items-center text-xs font-semibold text-[#FA4D89] hover:text-[#E11D74] mb-2 transition">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Home
             </Link>
-            <h1 className="font-serif text-3xl font-bold text-[#29232A]">
-              My <span className="text-[#C65D7B] italic">Appointments</span>
+            <h1 className="font-serif text-3xl font-bold text-[#1F2937]">
+              My <span className="text-[#FA4D89] italic">Appointments</span>
             </h1>
-            <p className="text-[#6E6270] text-xs sm:text-sm mt-1">
-              Signed in as <span className="font-semibold text-[#29232A]">{user?.name}</span> ({user?.email})
+            <p className="text-[#4B5563] text-xs sm:text-sm mt-1">
+              Signed in as <span className="font-semibold text-[#1F2937]">{user?.name}</span> ({user?.email})
             </p>
           </div>
 
           <Link to="/book">
-            <button className="bg-[#C65D7B] hover:bg-[#B24B68] text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-salon hover:shadow-salon-hover transition">
+            <button className="bg-[#FA4D89] hover:bg-[#E11D74] text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-salon hover:shadow-salon-hover transition">
               <CalendarCheck className="w-4 h-4" /> Book New Service
             </button>
           </Link>
         </div>
 
         {/* Filter Navigation Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 bg-white p-1.5 rounded-2xl shadow-2xs border border-[#F2DCE2] max-w-fit">
+        <div className="flex flex-wrap gap-2 mb-8 bg-white p-1.5 rounded-2xl shadow-2xs border border-[#FCE7F0] max-w-fit">
           <button
             onClick={() => setFilterTab('upcoming')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
               filterTab === 'upcoming' 
-                ? 'bg-[#C65D7B] text-white shadow-2xs' 
-                : 'text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9]'
+                ? 'bg-[#FA4D89] text-white shadow-2xs' 
+                : 'text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5]'
             }`}
           >
             Upcoming
@@ -268,8 +268,8 @@ const MyAppointments: React.FC = () => {
             onClick={() => setFilterTab('past')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
               filterTab === 'past' 
-                ? 'bg-[#C65D7B] text-white shadow-2xs' 
-                : 'text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9]'
+                ? 'bg-[#FA4D89] text-white shadow-2xs' 
+                : 'text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5]'
             }`}
           >
             Past & Completed
@@ -278,8 +278,8 @@ const MyAppointments: React.FC = () => {
             onClick={() => setFilterTab('cancelled')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
               filterTab === 'cancelled' 
-                ? 'bg-[#C65D7B] text-white shadow-2xs' 
-                : 'text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9]'
+                ? 'bg-[#FA4D89] text-white shadow-2xs' 
+                : 'text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5]'
             }`}
           >
             Cancelled
@@ -288,8 +288,8 @@ const MyAppointments: React.FC = () => {
             onClick={() => setFilterTab('all')}
             className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
               filterTab === 'all' 
-                ? 'bg-[#C65D7B] text-white shadow-2xs' 
-                : 'text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9]'
+                ? 'bg-[#FA4D89] text-white shadow-2xs' 
+                : 'text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5]'
             }`}
           >
             All Bookings ({appointments.length})
@@ -299,20 +299,20 @@ const MyAppointments: React.FC = () => {
         {/* Content State */}
         {isLoading ? (
           <div className="py-20 text-center">
-            <Loader2 className="w-8 h-8 text-[#C65D7B] animate-spin mx-auto mb-3" />
-            <p className="text-[#6E6270] text-sm">Loading your appointments...</p>
+            <Loader2 className="w-8 h-8 text-[#FA4D89] animate-spin mx-auto mb-3" />
+            <p className="text-[#4B5563] text-sm">Loading your appointments...</p>
           </div>
         ) : filteredAppointments.length === 0 ? (
-          <div className="bg-white rounded-3xl p-12 text-center border border-[#F2DCE2] shadow-2xs max-w-lg mx-auto">
-            <Calendar className="w-16 h-16 text-[#E8A0B1] mx-auto mb-4" />
-            <h3 className="font-serif text-xl font-bold text-[#29232A] mb-2">No Appointments Found</h3>
-            <p className="text-[#6E6270] text-xs sm:text-sm mb-6">
+          <div className="bg-white rounded-3xl p-12 text-center border border-[#FCE7F0] shadow-2xs max-w-lg mx-auto">
+            <Calendar className="w-16 h-16 text-[#F9A8D4] mx-auto mb-4" />
+            <h3 className="font-serif text-xl font-bold text-[#1F2937] mb-2">No Appointments Found</h3>
+            <p className="text-[#4B5563] text-xs sm:text-sm mb-6">
               {filterTab === 'upcoming' 
                 ? 'You do not have any upcoming appointments scheduled right now.' 
                 : 'No appointments in this category.'}
             </p>
             <Link to="/book">
-              <button className="bg-[#C65D7B] hover:bg-[#B24B68] text-white px-6 py-3 rounded-full font-semibold transition shadow-salon text-sm">
+              <button className="bg-[#FA4D89] hover:bg-[#E11D74] text-white px-6 py-3 rounded-full font-semibold transition shadow-salon text-sm">
                 Schedule a Treatment
               </button>
             </Link>
@@ -325,42 +325,42 @@ const MyAppointments: React.FC = () => {
               return (
                 <div
                   key={appt._id}
-                  className="bg-white rounded-3xl p-6 sm:p-7 shadow-2xs border border-[#F2DCE2] hover:shadow-salon transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+                  className="bg-white rounded-3xl p-6 sm:p-7 shadow-2xs border border-[#FCE7F0] hover:shadow-salon transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
                 >
                   {/* Left Column: Details */}
                   <div className="space-y-3 flex-1">
                     <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="font-serif text-lg font-bold text-[#29232A]">
+                      <h3 className="font-serif text-lg font-bold text-[#1F2937]">
                         {appt.service}
                       </h3>
                       {getStatusBadge(appt.status)}
                       {appt.bookingRef && (
-                        <span className="font-mono text-xs bg-[#F7E5E9] text-[#C65D7B] px-2.5 py-0.5 rounded-md border border-[#E8A0B1]/40">
+                        <span className="font-mono text-xs bg-[#FFF0F5] text-[#FA4D89] px-2.5 py-0.5 rounded-md border border-[#F9A8D4]/40">
                           Ref: {appt.bookingRef}
                         </span>
                       )}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-4 text-xs text-[#6E6270]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-4 text-xs text-[#4B5563]">
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-[#C65D7B] shrink-0" />
-                        <span>Date: <strong className="text-[#29232A]">{appt.date}</strong></span>
+                        <Calendar className="w-4 h-4 text-[#FA4D89] shrink-0" />
+                        <span>Date: <strong className="text-[#1F2937]">{appt.date}</strong></span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-[#C65D7B] shrink-0" />
-                        <span>Time: <strong className="text-[#29232A]">{appt.time}</strong></span>
+                        <Clock className="w-4 h-4 text-[#FA4D89] shrink-0" />
+                        <span>Time: <strong className="text-[#1F2937]">{appt.time}</strong></span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <User className="w-4 h-4 text-[#C65D7B] shrink-0" />
-                        <span>Specialist: <strong className="text-[#29232A]">{appt.staff || 'Any Specialist'}</strong></span>
+                        <User className="w-4 h-4 text-[#FA4D89] shrink-0" />
+                        <span>Specialist: <strong className="text-[#1F2937]">{appt.staff || 'Any Specialist'}</strong></span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Scissors className="w-4 h-4 text-[#C65D7B] shrink-0" />
+                        <Scissors className="w-4 h-4 text-[#FA4D89] shrink-0" />
                         <span>Duration: {appt.duration || '60 mins'}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-semibold text-[#6E6270]">Amount:</span>
-                        <strong className="text-[#29232A] text-sm">{appt.amount}</strong>
+                        <span className="font-semibold text-[#4B5563]">Amount:</span>
+                        <strong className="text-[#1F2937] text-sm">{appt.amount}</strong>
                         {appt.discountAmount && (
                           <span className="text-[10px] bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded border border-emerald-200">
                             Saved {appt.discountAmount}
@@ -382,8 +382,8 @@ const MyAppointments: React.FC = () => {
                     )}
 
                     {appt.notes && (
-                      <p className="text-xs text-[#6E6270]">
-                        <FileText className="w-3.5 h-3.5 inline mr-1 text-[#C65D7B]" />
+                      <p className="text-xs text-[#4B5563]">
+                        <FileText className="w-3.5 h-3.5 inline mr-1 text-[#FA4D89]" />
                         <strong>Notes:</strong> {appt.notes}
                       </p>
                     )}
@@ -395,7 +395,7 @@ const MyAppointments: React.FC = () => {
                       <>
                         <button
                           onClick={() => openRescheduleModal(appt)}
-                          className="px-4 py-2 bg-[#F7E5E9] hover:bg-[#E8A0B1]/30 text-[#C65D7B] rounded-xl text-xs font-semibold border border-[#E8A0B1]/50 transition flex items-center justify-center gap-1.5"
+                          className="px-4 py-2 bg-[#FFF0F5] hover:bg-[#F9A8D4]/30 text-[#FA4D89] rounded-xl text-xs font-semibold border border-[#F9A8D4]/50 transition flex items-center justify-center gap-1.5"
                         >
                           <RefreshCw className="w-3.5 h-3.5" /> Reschedule Slot
                         </button>
@@ -427,25 +427,25 @@ const MyAppointments: React.FC = () => {
         {/* Reschedule Modal */}
         {rescheduleModalAppt && (
           <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
-            <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#F2DCE2]">
-              <div className="flex items-center justify-between pb-4 border-b border-[#F2DCE2] mb-4">
-                <h3 className="font-serif text-lg font-bold text-[#29232A]">
+            <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#FCE7F0]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#FCE7F0] mb-4">
+                <h3 className="font-serif text-lg font-bold text-[#1F2937]">
                   Reschedule Appointment
                 </h3>
-                <button onClick={() => setRescheduleModalAppt(null)} className="p-1 text-[#6E6270] hover:text-[#29232A]">
+                <button onClick={() => setRescheduleModalAppt(null)} className="p-1 text-[#4B5563] hover:text-[#1F2937]">
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               <form onSubmit={handleRescheduleSubmit} className="space-y-4">
-                <div className="p-3 bg-[#FFF8F6] rounded-xl text-xs space-y-1 border border-[#F2DCE2]">
+                <div className="p-3 bg-[#FFF9FA] rounded-xl text-xs space-y-1 border border-[#FCE7F0]">
                   <p><strong>Service:</strong> {rescheduleModalAppt.service}</p>
                   <p><strong>Current Slot:</strong> {rescheduleModalAppt.date} at {rescheduleModalAppt.time}</p>
                   <p><strong>Booking Ref:</strong> {rescheduleModalAppt.bookingRef}</p>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1">
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1">
                     Select New Date *
                   </label>
                   <input
@@ -454,17 +454,17 @@ const MyAppointments: React.FC = () => {
                     value={newDate}
                     onChange={(e) => setNewDate(e.target.value)}
                     required
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:ring-2 focus:ring-[#C65D7B]/30 outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:ring-2 focus:ring-[#FA4D89]/30 outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1">
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1">
                     Available Time Slot *
                   </label>
                   {isLoadingSlots ? (
-                    <div className="p-4 text-center text-xs text-[#6E6270]">
-                      <Loader2 className="w-5 h-5 text-[#C65D7B] animate-spin mx-auto mb-1" />
+                    <div className="p-4 text-center text-xs text-[#4B5563]">
+                      <Loader2 className="w-5 h-5 text-[#FA4D89] animate-spin mx-auto mb-1" />
                       Checking available slots for {newDate}...
                     </div>
                   ) : availableSlots.length === 0 ? (
@@ -480,8 +480,8 @@ const MyAppointments: React.FC = () => {
                           onClick={() => setNewTime(slot)}
                           className={`py-2 px-2 text-xs font-semibold rounded-xl border transition ${
                             newTime === slot 
-                              ? 'bg-[#C65D7B] text-white border-[#C65D7B] shadow-2xs' 
-                              : 'bg-white hover:bg-[#F7E5E9] text-[#29232A] border-[#F2DCE2]'
+                              ? 'bg-[#FA4D89] text-white border-[#FA4D89] shadow-2xs' 
+                              : 'bg-white hover:bg-[#FFF0F5] text-[#1F2937] border-[#FCE7F0]'
                           }`}
                         >
                           {slot}
@@ -492,7 +492,7 @@ const MyAppointments: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1">
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1">
                     Reason for Rescheduling (Optional)
                   </label>
                   <input
@@ -500,7 +500,7 @@ const MyAppointments: React.FC = () => {
                     placeholder="e.g. Schedule conflict, personal commitment"
                     value={rescheduleReason}
                     onChange={(e) => setRescheduleReason(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#F2DCE2] text-xs focus:ring-2 focus:ring-[#C65D7B]/30 outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#FCE7F0] text-xs focus:ring-2 focus:ring-[#FA4D89]/30 outline-none"
                   />
                 </div>
 
@@ -508,14 +508,14 @@ const MyAppointments: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setRescheduleModalAppt(null)}
-                    className="flex-1 py-2.5 rounded-xl border border-[#F2DCE2] text-[#6E6270] font-semibold text-xs hover:bg-[#F7E5E9] transition"
+                    className="flex-1 py-2.5 rounded-xl border border-[#FCE7F0] text-[#4B5563] font-semibold text-xs hover:bg-[#FFF0F5] transition"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmittingReschedule || !newTime}
-                    className="flex-1 py-2.5 rounded-xl bg-[#C65D7B] hover:bg-[#B24B68] disabled:opacity-50 text-white font-semibold text-xs shadow-salon transition flex items-center justify-center gap-1.5"
+                    className="flex-1 py-2.5 rounded-xl bg-[#FA4D89] hover:bg-[#E11D74] disabled:opacity-50 text-white font-semibold text-xs shadow-salon transition flex items-center justify-center gap-1.5"
                   >
                     {isSubmittingReschedule ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Confirm New Slot'}
                   </button>
@@ -531,18 +531,18 @@ const MyAppointments: React.FC = () => {
             <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-red-100">
               <div className="flex items-center gap-3 mb-4 text-red-600">
                 <AlertCircle className="w-6 h-6 shrink-0" />
-                <h3 className="font-serif text-lg font-bold text-[#29232A]">
+                <h3 className="font-serif text-lg font-bold text-[#1F2937]">
                   Cancel Appointment?
                 </h3>
               </div>
 
-              <p className="text-xs text-[#6E6270] mb-4 leading-relaxed">
+              <p className="text-xs text-[#4B5563] mb-4 leading-relaxed">
                 Are you sure you want to cancel your appointment for <strong>{cancelModalAppt.service}</strong> on <strong>{cancelModalAppt.date}</strong> at <strong>{cancelModalAppt.time}</strong>?
               </p>
 
               <form onSubmit={handleCancelSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-[#29232A] mb-1">
+                  <label className="block text-xs font-semibold text-[#1F2937] mb-1">
                     Reason for cancellation (Optional)
                   </label>
                   <textarea
@@ -550,7 +550,7 @@ const MyAppointments: React.FC = () => {
                     placeholder="Please let us know why you need to cancel..."
                     value={cancelReason}
                     onChange={(e) => setCancelReason(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-[#F2DCE2] text-xs focus:ring-2 focus:ring-[#C65D7B]/30 outline-none"
+                    className="w-full px-3.5 py-2 rounded-xl border border-[#FCE7F0] text-xs focus:ring-2 focus:ring-[#FA4D89]/30 outline-none"
                   />
                 </div>
 
@@ -558,7 +558,7 @@ const MyAppointments: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setCancelModalAppt(null)}
-                    className="flex-1 py-2.5 rounded-xl border border-[#F2DCE2] text-[#6E6270] font-semibold text-xs hover:bg-[#F7E5E9] transition"
+                    className="flex-1 py-2.5 rounded-xl border border-[#FCE7F0] text-[#4B5563] font-semibold text-xs hover:bg-[#FFF0F5] transition"
                   >
                     Keep Booking
                   </button>

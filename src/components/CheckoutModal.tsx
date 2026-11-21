@@ -262,58 +262,58 @@ const Checkout: React.FC = () => {
   const isContactPricing = servicePrice.toLowerCase().includes('contact') || isBridal;
 
   return (
-    <div className="min-h-screen bg-[#FFF8F6] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FFF9FA] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <button 
           onClick={() => navigate(-1)} 
-          className="inline-flex items-center text-[#6E6270] hover:text-[#C65D7B] mb-6 transition text-sm font-semibold bg-white px-4 py-2 rounded-full border border-[#F2DCE2] shadow-2xs"
+          className="inline-flex items-center text-[#4B5563] hover:text-[#FA4D89] mb-6 transition text-sm font-semibold bg-white px-4 py-2 rounded-full border border-[#FCE7F0] shadow-2xs"
         >
           <ArrowLeft className="w-4 h-4 mr-1.5" /> Back
         </button>
 
         {isSuccess && confirmedBooking ? (
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-salon text-center border border-[#F2DCE2] max-w-xl mx-auto animate-fade-in">
-            <div className="w-20 h-20 rounded-full bg-[#F7E5E9] flex items-center justify-center mx-auto mb-5 text-[#C65D7B]">
+          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-salon text-center border border-[#FCE7F0] max-w-xl mx-auto animate-fade-in">
+            <div className="w-20 h-20 rounded-full bg-[#FFF0F5] flex items-center justify-center mx-auto mb-5 text-[#FA4D89]">
               <CheckCircle2 className="w-12 h-12" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C65D7B] bg-[#F7E5E9] px-3.5 py-1 rounded-full border border-[#E8A0B1]/40">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#FA4D89] bg-[#FFF0F5] px-3.5 py-1 rounded-full border border-[#F9A8D4]/40">
               Appointment Confirmed
             </span>
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#29232A] mt-3 mb-2">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#1F2937] mt-3 mb-2">
               Thank You, {confirmedBooking.user}!
             </h2>
-            <p className="text-[#6E6270] text-sm mb-6 leading-relaxed">
+            <p className="text-[#4B5563] text-sm mb-6 leading-relaxed">
               Your appointment has been reserved at Shree Ambika Beauty Parlour & Spa. We look forward to welcoming you.
             </p>
 
             {/* Receipt Summary Card */}
-            <div className="bg-[#FFF8F6] p-6 rounded-2xl mb-6 text-left border border-[#F2DCE2] text-sm space-y-3">
-              <div className="flex justify-between items-center border-b border-[#F2DCE2] pb-2.5">
-                <span className="text-[#6E6270] text-xs">Booking Reference:</span>
-                <span className="font-mono font-bold text-[#C65D7B] bg-white px-2.5 py-0.5 rounded border border-[#E8A0B1]">
+            <div className="bg-[#FFF9FA] p-6 rounded-2xl mb-6 text-left border border-[#FCE7F0] text-sm space-y-3">
+              <div className="flex justify-between items-center border-b border-[#FCE7F0] pb-2.5">
+                <span className="text-[#4B5563] text-xs">Booking Reference:</span>
+                <span className="font-mono font-bold text-[#FA4D89] bg-white px-2.5 py-0.5 rounded border border-[#F9A8D4]">
                   {confirmedBooking.bookingRef || 'SHR-APPT'}
                 </span>
               </div>
-              <div className="flex justify-between border-b border-[#F2DCE2] pb-2">
-                <span className="text-[#6E6270]">Service:</span>
-                <span className="font-semibold text-[#29232A]">{confirmedBooking.service}</span>
+              <div className="flex justify-between border-b border-[#FCE7F0] pb-2">
+                <span className="text-[#4B5563]">Service:</span>
+                <span className="font-semibold text-[#1F2937]">{confirmedBooking.service}</span>
               </div>
-              <div className="flex justify-between border-b border-[#F2DCE2] pb-2">
-                <span className="text-[#6E6270]">Specialist:</span>
-                <span className="font-medium text-[#29232A]">{confirmedBooking.staff || 'Any Specialist'}</span>
+              <div className="flex justify-between border-b border-[#FCE7F0] pb-2">
+                <span className="text-[#4B5563]">Specialist:</span>
+                <span className="font-medium text-[#1F2937]">{confirmedBooking.staff || 'Any Specialist'}</span>
               </div>
-              <div className="flex justify-between border-b border-[#F2DCE2] pb-2">
-                <span className="text-[#6E6270]">Date & Time:</span>
-                <span className="font-semibold text-[#29232A]">{confirmedBooking.date} at {confirmedBooking.time}</span>
+              <div className="flex justify-between border-b border-[#FCE7F0] pb-2">
+                <span className="text-[#4B5563]">Date & Time:</span>
+                <span className="font-semibold text-[#1F2937]">{confirmedBooking.date} at {confirmedBooking.time}</span>
               </div>
-              <div className="flex justify-between border-b border-[#F2DCE2] pb-2">
-                <span className="text-[#6E6270]">Duration:</span>
-                <span className="text-[#29232A]">{confirmedBooking.duration || '60 mins'}</span>
+              <div className="flex justify-between border-b border-[#FCE7F0] pb-2">
+                <span className="text-[#4B5563]">Duration:</span>
+                <span className="text-[#1F2937]">{confirmedBooking.duration || '60 mins'}</span>
               </div>
               <div className="flex justify-between items-center pt-1">
-                <span className="text-[#29232A] font-semibold">Total Amount:</span>
+                <span className="text-[#1F2937] font-semibold">Total Amount:</span>
                 <div className="text-right">
-                  <span className="font-serif font-bold text-xl text-[#C65D7B]">{confirmedBooking.amount}</span>
+                  <span className="font-serif font-bold text-xl text-[#FA4D89]">{confirmedBooking.amount}</span>
                   {confirmedBooking.discountAmount && (
                     <span className="block text-[11px] text-emerald-700 font-semibold">
                       Discount Applied: -₹{confirmedBooking.discountAmount}
@@ -326,13 +326,13 @@ const Checkout: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               {isAuthenticated ? (
                 <Link to="/my-bookings" className="flex-1">
-                  <button className="w-full bg-[#C65D7B] hover:bg-[#B24B68] text-white py-3 rounded-full font-semibold transition shadow-salon text-sm">
+                  <button className="w-full bg-[#FA4D89] hover:bg-[#E11D74] text-white py-3 rounded-full font-semibold transition shadow-salon text-sm">
                     View in My Bookings
                   </button>
                 </Link>
               ) : (
                 <Link to="/" className="flex-1">
-                  <button className="w-full bg-[#C65D7B] hover:bg-[#B24B68] text-white py-3 rounded-full font-semibold transition shadow-salon text-sm">
+                  <button className="w-full bg-[#FA4D89] hover:bg-[#E11D74] text-white py-3 rounded-full font-semibold transition shadow-salon text-sm">
                     Return to Home
                   </button>
                 </Link>
@@ -350,22 +350,22 @@ const Checkout: React.FC = () => {
               </a>
             </div>
 
-            <p className="text-[11px] text-[#6E6270] mt-5">
+            <p className="text-[11px] text-[#4B5563] mt-5">
               Payment is made at the parlour upon service completion (UPI, Cash, or Cards). Free cancellation up to 2 hours prior to scheduled time.
             </p>
           </div>
         ) : (
-          <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-salon border border-[#F2DCE2]">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#F2DCE2] pb-6 mb-8">
+          <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-salon border border-[#FCE7F0]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#FCE7F0] pb-6 mb-8">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#F7E5E9] text-[#C65D7B] text-xs font-semibold rounded-full mb-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFF0F5] text-[#FA4D89] text-xs font-semibold rounded-full mb-2">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Reserve Your Experience</span>
                 </div>
-                <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#29232A]">
-                  Book an <span className="text-[#C65D7B] italic">Appointment</span>
+                <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2937]">
+                  Book an <span className="text-[#FA4D89] italic">Appointment</span>
                 </h1>
-                <p className="text-[#6E6270] text-xs sm:text-sm mt-1">
+                <p className="text-[#4B5563] text-xs sm:text-sm mt-1">
                   Choose your beauty treatment, preferred specialist, and ideal time slot.
                 </p>
               </div>
@@ -374,7 +374,7 @@ const Checkout: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => openAuthModal('login')}
-                  className="text-xs text-[#C65D7B] hover:text-[#B24B68] font-semibold bg-[#F7E5E9] px-3.5 py-2 rounded-full border border-[#E8A0B1]/40 self-start sm:self-auto transition"
+                  className="text-xs text-[#FA4D89] hover:text-[#E11D74] font-semibold bg-[#FFF0F5] px-3.5 py-2 rounded-full border border-[#F9A8D4]/40 self-start sm:self-auto transition"
                 >
                   Already a guest? Sign In
                 </button>
@@ -388,15 +388,15 @@ const Checkout: React.FC = () => {
                 
                 {/* 1. Service Selection */}
                 <div>
-                  <label className="block text-xs font-bold text-[#29232A] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Scissors className="w-4 h-4 text-[#C65D7B]" />
+                  <label className="block text-xs font-bold text-[#1F2937] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Scissors className="w-4 h-4 text-[#FA4D89]" />
                     <span>1. Select Treatment *</span>
                   </label>
                   {packages.length > 0 ? (
                     <select
                       value={selectedService}
                       onChange={(e) => handleServiceChange(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-[#F2DCE2] text-sm font-medium focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white shadow-2xs text-[#29232A]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#FCE7F0] text-sm font-medium focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white shadow-2xs text-[#1F2937]"
                     >
                       {packages.map(p => (
                         <option key={p._id} value={p.name}>
@@ -409,21 +409,21 @@ const Checkout: React.FC = () => {
                       type="text"
                       value={selectedService}
                       readOnly
-                      className="w-full px-4 py-3 rounded-xl border border-[#F2DCE2] text-sm bg-[#FFF8F6] font-medium text-[#29232A]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#FCE7F0] text-sm bg-[#FFF9FA] font-medium text-[#1F2937]"
                     />
                   )}
                 </div>
 
                 {/* 2. Staff Specialist Selection */}
                 <div>
-                  <label className="block text-xs font-bold text-[#29232A] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <User className="w-4 h-4 text-[#C65D7B]" />
+                  <label className="block text-xs font-bold text-[#1F2937] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <User className="w-4 h-4 text-[#FA4D89]" />
                     <span>2. Choose Beautician / Specialist</span>
                   </label>
                   <select
                     value={selectedStaff}
                     onChange={(e) => setSelectedStaff(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-[#F2DCE2] text-sm font-medium focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white shadow-2xs text-[#29232A]"
+                    className="w-full px-4 py-3 rounded-xl border border-[#FCE7F0] text-sm font-medium focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white shadow-2xs text-[#1F2937]"
                   >
                     <option value="Any Available Specialist">Any Available Specialist (Recommended)</option>
                     {staffList.map(s => (
@@ -436,8 +436,8 @@ const Checkout: React.FC = () => {
 
                 {/* 3. Appointment Date */}
                 <div>
-                  <label className="block text-xs font-bold text-[#29232A] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Calendar className="w-4 h-4 text-[#C65D7B]" />
+                  <label className="block text-xs font-bold text-[#1F2937] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-[#FA4D89]" />
                     <span>3. Select Date *</span>
                   </label>
                   <input
@@ -446,26 +446,26 @@ const Checkout: React.FC = () => {
                     value={bookingDate}
                     onChange={(e) => setBookingDate(e.target.value)}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-[#F2DCE2] text-sm font-medium focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white text-[#29232A] shadow-2xs"
+                    className="w-full px-4 py-3 rounded-xl border border-[#FCE7F0] text-sm font-medium focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white text-[#1F2937] shadow-2xs"
                   />
                 </div>
 
                 {/* 4. Time Slot Picker */}
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
-                    <label className="text-xs font-bold text-[#29232A] uppercase tracking-wider flex items-center gap-1.5">
-                      <Clock className="w-4 h-4 text-[#C65D7B]" />
+                    <label className="text-xs font-bold text-[#1F2937] uppercase tracking-wider flex items-center gap-1.5">
+                      <Clock className="w-4 h-4 text-[#FA4D89]" />
                       <span>4. Available Time Slots *</span>
                     </label>
-                    <span className="text-[11px] text-[#6E6270]">
+                    <span className="text-[11px] text-[#4B5563]">
                       {availableSlots.length} slot(s) open
                     </span>
                   </div>
 
                   {isLoadingSlots ? (
-                    <div className="p-8 text-center bg-[#FFF8F6] rounded-2xl border border-[#F2DCE2]">
-                      <Loader2 className="w-6 h-6 text-[#C65D7B] animate-spin mx-auto mb-2" />
-                      <p className="text-xs text-[#6E6270]">Checking availability for {bookingDate}...</p>
+                    <div className="p-8 text-center bg-[#FFF9FA] rounded-2xl border border-[#FCE7F0]">
+                      <Loader2 className="w-6 h-6 text-[#FA4D89] animate-spin mx-auto mb-2" />
+                      <p className="text-xs text-[#4B5563]">Checking availability for {bookingDate}...</p>
                     </div>
                   ) : availableSlots.length === 0 ? (
                     <div className="p-4 bg-amber-50 text-amber-800 rounded-2xl border border-amber-200 text-xs flex items-center gap-2">
@@ -481,11 +481,11 @@ const Checkout: React.FC = () => {
                           onClick={() => setBookingTime(slot)}
                           className={`py-3 px-3 text-xs font-semibold rounded-xl border transition-all duration-200 flex items-center justify-center gap-1.5 ${
                             bookingTime === slot
-                              ? 'bg-[#C65D7B] text-white border-[#C65D7B] shadow-salon'
-                              : 'bg-white hover:bg-[#F7E5E9]/60 text-[#29232A] border-[#F2DCE2] hover:border-[#E8A0B1]'
+                              ? 'bg-[#FA4D89] text-white border-[#FA4D89] shadow-salon'
+                              : 'bg-white hover:bg-[#FFF0F5]/60 text-[#1F2937] border-[#FCE7F0] hover:border-[#F9A8D4]'
                           }`}
                         >
-                          <Clock className={`w-3.5 h-3.5 ${bookingTime === slot ? 'text-white' : 'text-[#C65D7B]'}`} />
+                          <Clock className={`w-3.5 h-3.5 ${bookingTime === slot ? 'text-white' : 'text-[#FA4D89]'}`} />
                           <span>{slot}</span>
                         </button>
                       ))}
@@ -499,67 +499,67 @@ const Checkout: React.FC = () => {
               <div className="lg:col-span-5 space-y-6">
                 
                 {/* Customer Information Card */}
-                <div className="bg-[#FFF8F6] p-5 rounded-2xl border border-[#F2DCE2] space-y-4">
-                  <h3 className="text-xs font-bold text-[#29232A] uppercase tracking-wider flex items-center gap-1.5">
-                    <User className="w-4 h-4 text-[#C65D7B]" />
+                <div className="bg-[#FFF9FA] p-5 rounded-2xl border border-[#FCE7F0] space-y-4">
+                  <h3 className="text-xs font-bold text-[#1F2937] uppercase tracking-wider flex items-center gap-1.5">
+                    <User className="w-4 h-4 text-[#FA4D89]" />
                     <span>Guest Information</span>
                   </h3>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1">Full Name *</label>
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1">Full Name *</label>
                     <input
                       type="text"
                       placeholder="e.g. Aditi Sharma"
                       value={clientName}
                       onChange={(e) => setClientName(e.target.value)}
                       required
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white text-[#29232A]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white text-[#1F2937]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1">Phone Number (Required) *</label>
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1">Phone Number (Required) *</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-2.5 text-xs text-[#6E6270] font-medium">+91</span>
+                      <span className="absolute left-3 top-2.5 text-xs text-[#4B5563] font-medium">+91</span>
                       <input
                         type="tel"
                         placeholder="98765 43210"
                         value={clientPhone}
                         onChange={(e) => setClientPhone(e.target.value)}
                         required
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white text-[#29232A]"
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white text-[#1F2937]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1">Email Address (Optional)</label>
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1">Email Address (Optional)</label>
                     <input
                       type="email"
                       placeholder="aditi@example.com"
                       value={clientEmail}
                       onChange={(e) => setClientEmail(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#F2DCE2] text-sm focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white text-[#29232A]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#FCE7F0] text-sm focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white text-[#1F2937]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-[#29232A] mb-1">Notes / Special Requests</label>
+                    <label className="block text-xs font-semibold text-[#1F2937] mb-1">Notes / Special Requests</label>
                     <textarea
                       rows={2}
                       placeholder="e.g. Sensitive skin, bridal consultation..."
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-[#F2DCE2] text-xs focus:ring-2 focus:ring-[#C65D7B]/30 outline-none bg-white text-[#29232A]"
+                      className="w-full px-3.5 py-2 rounded-xl border border-[#FCE7F0] text-xs focus:ring-2 focus:ring-[#FA4D89]/30 outline-none bg-white text-[#1F2937]"
                     />
                   </div>
                 </div>
 
                 {/* Optional Voucher Code (only for services with numeric pricing) */}
                 {!isContactPricing && (
-                  <div className="bg-white p-5 rounded-2xl border border-[#F2DCE2] shadow-2xs space-y-3">
-                    <h3 className="text-xs font-bold text-[#29232A] uppercase tracking-wider flex items-center gap-1.5">
-                      <Tag className="w-4 h-4 text-[#C65D7B]" />
+                  <div className="bg-white p-5 rounded-2xl border border-[#FCE7F0] shadow-2xs space-y-3">
+                    <h3 className="text-xs font-bold text-[#1F2937] uppercase tracking-wider flex items-center gap-1.5">
+                      <Tag className="w-4 h-4 text-[#FA4D89]" />
                       <span>Voucher / Referral Code (Optional)</span>
                     </h3>
 
@@ -588,13 +588,13 @@ const Checkout: React.FC = () => {
                           placeholder="Enter voucher code"
                           value={couponInput}
                           onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
-                          className="flex-1 px-3.5 py-2 rounded-xl border border-[#F2DCE2] text-xs uppercase font-mono tracking-wider focus:ring-2 focus:ring-[#C65D7B]/30 outline-none text-[#29232A]"
+                          className="flex-1 px-3.5 py-2 rounded-xl border border-[#FCE7F0] text-xs uppercase font-mono tracking-wider focus:ring-2 focus:ring-[#FA4D89]/30 outline-none text-[#1F2937]"
                         />
                         <button
                           type="button"
                           onClick={handleApplyCoupon}
                           disabled={isValidatingCoupon || !couponInput.trim()}
-                          className="px-4 py-2 bg-[#F7E5E9] hover:bg-[#E8A0B1]/30 text-[#C65D7B] border border-[#E8A0B1] disabled:opacity-50 rounded-xl text-xs font-semibold transition"
+                          className="px-4 py-2 bg-[#FFF0F5] hover:bg-[#F9A8D4]/30 text-[#FA4D89] border border-[#F9A8D4] disabled:opacity-50 rounded-xl text-xs font-semibold transition"
                         >
                           {isValidatingCoupon ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : 'Apply'}
                         </button>
@@ -605,11 +605,11 @@ const Checkout: React.FC = () => {
 
                 {/* Bridal Special Benefit Notice */}
                 {isBridal && (
-                  <div className="p-4 bg-[#F7E5E9] border border-[#E8A0B1] rounded-2xl flex items-start gap-3 text-xs text-[#29232A]">
-                    <Gift className="w-5 h-5 text-[#C65D7B] shrink-0 mt-0.5" />
+                  <div className="p-4 bg-[#FFF0F5] border border-[#F9A8D4] rounded-2xl flex items-start gap-3 text-xs text-[#1F2937]">
+                    <Gift className="w-5 h-5 text-[#FA4D89] shrink-0 mt-0.5" />
                     <div>
-                      <span className="font-bold text-[#C65D7B] block text-sm">Special Bridal Benefit Included</span>
-                      <p className="text-[#6E6270] mt-0.5 leading-relaxed">
+                      <span className="font-bold text-[#FA4D89] block text-sm">Special Bridal Benefit Included</span>
+                      <p className="text-[#4B5563] mt-0.5 leading-relaxed">
                         Every Bridal Makeup booking comes with <strong>one complimentary makeup service</strong> for a guest or family member. Our senior bridal artist will consult with you upon reservation to discuss your bridal look and confirm custom pricing.
                       </p>
                     </div>
@@ -617,10 +617,10 @@ const Checkout: React.FC = () => {
                 )}
 
                 {/* Price Summary & Submit CTA */}
-                <div className="bg-[#FFF8F6] p-5 rounded-2xl border border-[#F2DCE2] space-y-3">
-                  <div className="flex justify-between text-xs text-[#6E6270]">
+                <div className="bg-[#FFF9FA] p-5 rounded-2xl border border-[#FCE7F0] space-y-3">
+                  <div className="flex justify-between text-xs text-[#4B5563]">
                     <span>Treatment Fee:</span>
-                    <span className="font-semibold text-[#29232A]">
+                    <span className="font-semibold text-[#1F2937]">
                       {isContactPricing ? 'Contact for Pricing' : servicePrice}
                     </span>
                   </div>
@@ -632,17 +632,17 @@ const Checkout: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="flex justify-between items-center border-t border-[#F2DCE2] pt-2.5 text-sm">
-                    <span className="font-bold text-[#29232A]">Total Payable:</span>
-                    <span className="font-serif font-bold text-xl text-[#C65D7B]">
+                  <div className="flex justify-between items-center border-t border-[#FCE7F0] pt-2.5 text-sm">
+                    <span className="font-bold text-[#1F2937]">Total Payable:</span>
+                    <span className="font-serif font-bold text-xl text-[#FA4D89]">
                       {isContactPricing 
                         ? 'Contact for Pricing' 
                         : (appliedCoupon ? `₹${appliedCoupon.finalAmount}` : servicePrice)}
                     </span>
                   </div>
 
-                  <div className="p-2.5 bg-white rounded-xl border border-[#F2DCE2] text-[11px] text-[#6E6270] flex items-center gap-2">
-                    <CreditCard className="w-4 h-4 text-[#C65D7B] shrink-0" />
+                  <div className="p-2.5 bg-white rounded-xl border border-[#FCE7F0] text-[11px] text-[#4B5563] flex items-center gap-2">
+                    <CreditCard className="w-4 h-4 text-[#FA4D89] shrink-0" />
                     <span>
                       {isContactPricing 
                         ? 'Pricing and payment terms finalized with parlour owner.' 
@@ -653,7 +653,7 @@ const Checkout: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isProcessing || !bookingTime}
-                    className="w-full py-3.5 rounded-full bg-[#C65D7B] hover:bg-[#B24B68] disabled:opacity-50 text-white font-bold text-sm shadow-salon hover:shadow-salon-hover transition-all duration-200 flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-full bg-[#FA4D89] hover:bg-[#E11D74] disabled:opacity-50 text-white font-bold text-sm shadow-salon hover:shadow-salon-hover transition-all duration-200 flex items-center justify-center gap-2"
                   >
                     {isProcessing ? (
                       <>
@@ -668,8 +668,8 @@ const Checkout: React.FC = () => {
                     )}
                   </button>
 
-                  <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#6E6270] pt-1">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#C65D7B]" />
+                  <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#4B5563] pt-1">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#FA4D89]" />
                     <span>Instant confirmation • Free cancellation up to 2h prior</span>
                   </div>
                 </div>

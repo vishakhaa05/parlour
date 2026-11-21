@@ -206,7 +206,7 @@ const AdminDashboard: React.FC = () => {
     duration: '45 mins', 
     desc: '', 
     includes: '', 
-    image: '/images/facial-treatment.jpg', 
+    image: '/image1.png', 
     status: 'Active',
     specialBenefit: ''
   });
@@ -440,7 +440,7 @@ const AdminDashboard: React.FC = () => {
         duration: targetPkg.duration || '45 mins',
         desc: targetPkg.desc,
         includes: targetPkg.includes ? targetPkg.includes.join(', ') : '',
-        image: targetPkg.image || '/images/facial-treatment.jpg',
+        image: targetPkg.image || '/image1.png',
         status: targetPkg.status || 'Active',
         specialBenefit: targetPkg.specialBenefit || ''
       });
@@ -453,7 +453,7 @@ const AdminDashboard: React.FC = () => {
         duration: '45 mins', 
         desc: '', 
         includes: '', 
-        image: '/images/facial-treatment.jpg', 
+        image: '/image1.png', 
         status: 'Active',
         specialBenefit: '' 
       });
@@ -2212,7 +2212,7 @@ const AdminDashboard: React.FC = () => {
                   <div className="flex gap-2">
                     <input
                       type="text"
-                      placeholder="/images/facial-treatment.jpg or URL"
+                      placeholder="/image1.png or URL"
                       value={pkgForm.image}
                       onChange={(e) => setPkgForm({ ...pkgForm, image: e.target.value })}
                       className="flex-1 px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-300"
@@ -2239,14 +2239,14 @@ const AdminDashboard: React.FC = () => {
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     <span className="text-[11px] text-gray-500 self-center">Presets:</span>
                     {[
-                      { label: 'Facial', url: '/images/facial-treatment.jpg' },
-                      { label: 'Hair Spa', url: '/images/hair-spa.jpg' },
-                      { label: 'Haircut', url: '/images/haircut.jpg' },
-                      { label: 'Waxing', url: '/images/body-wax.jpg' },
-                      { label: 'Mani/Pedi', url: '/images/pedicure-spa.jpg' },
-                      { label: 'Party Makeup', url: '/images/party-makeup.jpg' },
-                      { label: 'Engagement', url: '/images/nail-art.jpg' },
-                      { label: 'Bridal', url: '/images/bridal-makeup.jpg' },
+                      { label: 'Facial', url: '/image1.png' },
+                      { label: 'Hair Spa', url: '/image3.png' },
+                      { label: 'Haircut', url: '/image3.png' },
+                      { label: 'Waxing', url: '/image2.png' },
+                      { label: 'Mani/Pedi', url: '/image2.png' },
+                      { label: 'Party Makeup', url: '/image4.png' },
+                      { label: 'Engagement', url: '/image2.png' },
+                      { label: 'Bridal', url: '/hero.png' },
                     ].map(p => (
                       <button
                         key={p.label}
@@ -2268,7 +2268,7 @@ const AdminDashboard: React.FC = () => {
                         src={pkgForm.image} 
                         alt="Preview" 
                         className="w-full h-full object-cover" 
-                        onError={(e) => { (e.target as HTMLImageElement).src = '/images/facial-treatment.jpg'; }} 
+                        onError={(e) => { (e.target as HTMLImageElement).src = '/image1.png'; }} 
                       />
                     </div>
                   )}

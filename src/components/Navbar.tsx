@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FFF8F6]/95 backdrop-blur-md border-b border-[#F2DCE2] transition-all">
+    <nav className="sticky top-0 z-50 bg-[#FFF9FA]/95 backdrop-blur-md border-b border-[#FCE7F0] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-3 group focus:outline-none">
-          <div className="w-11 h-11 rounded-full bg-[#F7E5E9] border border-[#F2DCE2] p-1.5 flex items-center justify-center overflow-hidden shrink-0 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+          <div className="w-11 h-11 rounded-full bg-[#FFF0F5] border border-[#FCE7F0] p-1.5 flex items-center justify-center overflow-hidden shrink-0 shadow-2xs group-hover:scale-105 transition-transform duration-300">
             <img 
               src="/hero.png" 
               alt="Shree Ambika Logo" 
@@ -52,10 +52,10 @@ const Navbar: React.FC = () => {
             />
           </div>
           <div>
-            <span className="font-serif font-bold text-xl sm:text-2xl text-[#29232A] tracking-tight block leading-none">
+            <span className="font-serif font-bold text-xl sm:text-2xl text-[#1F2937] tracking-tight block leading-none">
               Shree Ambika
             </span>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C65D7B] font-semibold block mt-1">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-[#FA4D89] font-semibold block mt-1">
               Beauty Parlour & Spa
             </span>
           </div>
@@ -67,8 +67,8 @@ const Navbar: React.FC = () => {
             to="/" 
             className={`px-3.5 py-2 rounded-full transition-all duration-200 ${
               isActive('/') && !location.hash
-                ? 'text-[#C65D7B] bg-[#F7E5E9] font-semibold' 
-                : 'text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60'
+                ? 'text-[#FA4D89] bg-[#FFF0F5] font-semibold' 
+                : 'text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60'
             }`}
           >
             Home
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           <button 
             type="button"
             onClick={() => handleScrollTo('about')} 
-            className="px-3.5 py-2 rounded-full text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60 transition-all duration-200"
+            className="px-3.5 py-2 rounded-full text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60 transition-all duration-200"
           >
             About Us
           </button>
@@ -86,8 +86,8 @@ const Navbar: React.FC = () => {
             to="/content" 
             className={`px-3.5 py-2 rounded-full transition-all duration-200 ${
               isActive('/content') || isActive('/services')
-                ? 'text-[#C65D7B] bg-[#F7E5E9] font-semibold' 
-                : 'text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60'
+                ? 'text-[#FA4D89] bg-[#FFF0F5] font-semibold' 
+                : 'text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60'
             }`}
           >
             Treatments
@@ -97,8 +97,8 @@ const Navbar: React.FC = () => {
             to="/gallery" 
             className={`px-3.5 py-2 rounded-full transition-all duration-200 ${
               isActive('/gallery')
-                ? 'text-[#C65D7B] bg-[#F7E5E9] font-semibold' 
-                : 'text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60'
+                ? 'text-[#FA4D89] bg-[#FFF0F5] font-semibold' 
+                : 'text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60'
             }`}
           >
             Gallery
@@ -109,8 +109,8 @@ const Navbar: React.FC = () => {
             onClick={() => handleScrollTo('contact')} 
             className={`px-3.5 py-2 rounded-full transition-all duration-200 ${
               isActive('/contact')
-                ? 'text-[#C65D7B] bg-[#F7E5E9] font-semibold' 
-                : 'text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60'
+                ? 'text-[#FA4D89] bg-[#FFF0F5] font-semibold' 
+                : 'text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60'
             }`}
           >
             Contact
@@ -122,11 +122,11 @@ const Navbar: React.FC = () => {
               to="/my-bookings" 
               className={`px-3.5 py-2 rounded-full transition-all duration-200 inline-flex items-center gap-1.5 ${
                 isActive('/my-bookings') 
-                  ? 'text-[#C65D7B] bg-[#F7E5E9] font-semibold' 
-                  : 'text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9]/60'
+                  ? 'text-[#FA4D89] bg-[#FFF0F5] font-semibold' 
+                  : 'text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5]/60'
               }`}
             >
-              <BookOpen className="w-4 h-4 text-[#C65D7B]" />
+              <BookOpen className="w-4 h-4 text-[#FA4D89]" />
               <span>My Bookings</span>
             </Link>
           )}
@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
           {isAuthenticated && isAdmin && (
             <Link 
               to="/admin" 
-              className="ml-2 px-3 py-1.5 rounded-full text-xs font-semibold text-[#C65D7B] bg-[#F7E5E9] border border-[#E8A0B1] hover:bg-[#E8A0B1]/30 transition inline-flex items-center gap-1.5"
+              className="ml-2 px-3 py-1.5 rounded-full text-xs font-semibold text-[#FA4D89] bg-[#FFF0F5] border border-[#F9A8D4] hover:bg-[#F9A8D4]/30 transition inline-flex items-center gap-1.5"
             >
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Admin</span>
@@ -149,16 +149,16 @@ const Navbar: React.FC = () => {
             <div className="flex items-center gap-2">
               <Link 
                 to="/my-bookings"
-                className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 bg-white border border-[#F2DCE2] rounded-full text-xs font-semibold text-[#29232A] shadow-2xs hover:border-[#C65D7B] transition"
+                className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 bg-white border border-[#FCE7F0] rounded-full text-xs font-semibold text-[#1F2937] shadow-2xs hover:border-[#FA4D89] transition"
               >
-                <UserIcon className="w-3.5 h-3.5 text-[#C65D7B]" />
+                <UserIcon className="w-3.5 h-3.5 text-[#FA4D89]" />
                 <span className="max-w-[120px] truncate">{user?.name}</span>
-                {isAdmin && <span className="bg-[#C65D7B] text-white text-[10px] px-1.5 py-0.5 rounded-full">Admin</span>}
+                {isAdmin && <span className="bg-[#FA4D89] text-white text-[10px] px-1.5 py-0.5 rounded-full">Admin</span>}
               </Link>
               <button
                 onClick={logout}
                 title="Sign Out"
-                className="p-2 text-[#6E6270] hover:text-[#C65D7B] hover:bg-[#F7E5E9] rounded-full transition"
+                className="p-2 text-[#4B5563] hover:text-[#FA4D89] hover:bg-[#FFF0F5] rounded-full transition"
                 aria-label="Sign out"
               >
                 <LogOut className="w-4 h-4" />
@@ -167,15 +167,15 @@ const Navbar: React.FC = () => {
           ) : (
             <button
               onClick={() => openAuthModal('login')}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#29232A] hover:text-[#C65D7B] px-3.5 py-2 rounded-full hover:bg-[#F7E5E9] transition"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89] px-3.5 py-2 rounded-full hover:bg-[#FFF0F5] transition"
             >
-              <LogIn className="w-4 h-4 text-[#C65D7B]" />
+              <LogIn className="w-4 h-4 text-[#FA4D89]" />
               <span>Sign In</span>
             </button>
           )}
 
           <Link to="/book">
-            <button className="inline-flex items-center gap-2 bg-[#C65D7B] hover:bg-[#B24B68] text-white px-4 sm:px-6 py-2.5 rounded-full shadow-salon hover:shadow-salon-hover transition-all duration-300 hover:-translate-y-0.5 text-xs sm:text-sm font-semibold">
+            <button className="inline-flex items-center gap-2 bg-[#FA4D89] hover:bg-[#E11D74] text-white px-4 sm:px-6 py-2.5 rounded-full shadow-salon hover:shadow-salon-hover transition-all duration-300 hover:-translate-y-0.5 text-xs sm:text-sm font-semibold">
               <CalendarCheck className="w-4 h-4" />
               <span>Book Appointment</span>
             </button>
@@ -184,7 +184,7 @@ const Navbar: React.FC = () => {
           {/* Mobile hamburger menu */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#29232A] hover:text-[#C65D7B] hover:bg-[#F7E5E9] rounded-xl transition"
+            className="lg:hidden p-2 text-[#1F2937] hover:text-[#FA4D89] hover:bg-[#FFF0F5] rounded-xl transition"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -194,37 +194,37 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-[#F2DCE2] px-6 py-5 space-y-3 animate-fade-in shadow-lg">
+        <div className="lg:hidden bg-white border-b border-[#FCE7F0] px-6 py-5 space-y-3 animate-fade-in shadow-lg">
           <Link
             to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-sm font-semibold text-[#29232A] hover:text-[#C65D7B]"
+            className="block py-2 text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89]"
           >
             Home
           </Link>
           <button
             onClick={() => handleScrollTo('about')}
-            className="block w-full text-left py-2 text-sm font-semibold text-[#29232A] hover:text-[#C65D7B]"
+            className="block w-full text-left py-2 text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89]"
           >
             About Us
           </button>
           <Link
             to="/content"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-sm font-semibold text-[#29232A] hover:text-[#C65D7B]"
+            className="block py-2 text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89]"
           >
             Treatments & Pricing
           </Link>
           <Link
             to="/gallery"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-sm font-semibold text-[#29232A] hover:text-[#C65D7B]"
+            className="block py-2 text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89]"
           >
             Beauty Gallery
           </Link>
           <button
             onClick={() => handleScrollTo('contact')}
-            className="block w-full text-left py-2 text-sm font-semibold text-[#29232A] hover:text-[#C65D7B]"
+            className="block w-full text-left py-2 text-sm font-semibold text-[#1F2937] hover:text-[#FA4D89]"
           >
             Contact & Location
           </button>
@@ -233,7 +233,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/my-bookings"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-[#C65D7B]"
+              className="block py-2 text-sm font-semibold text-[#FA4D89]"
             >
               My Bookings
             </Link>
@@ -243,7 +243,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/admin"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-bold text-[#C65D7B]"
+              className="block py-2 text-sm font-bold text-[#FA4D89]"
             >
               Admin Dashboard
             </Link>
